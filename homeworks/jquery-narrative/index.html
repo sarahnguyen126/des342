@@ -8,15 +8,27 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>I'm a HEADERRRR</h1>
-    <div id="scene-one" class="scene">
+    <h1>This is a Story about a Very Cute, Very Sweet but Murderous Mochi.</h1>
+    <div id="scene-one">
       <img src="images/mochi-1.png" alt="" />
     </div>
-    <div id="scene-two" class="scene hide">
+    <div id="scene-two" class="hide">
       <img src="images/mochi-2.png" alt="" />
     </div>
-    <div id="scene-three" class="scene hide">
+    <div id="scene-three" class="hide">
       <img src="images/mochi-3.png" alt="" />
+    </div>
+    <div id="scene-four" class="hide">
+      <img src="images/mochi-4.png" alt="" />
+    </div>
+    <div id="scene-five" class="hide">
+      <img src="images/mochi-5.png" alt="" />
+    </div>
+    <div id="scene-six" class="hide">
+      <img src="images/mochi-6.png" alt="" />
+    </div>
+    <div id="scene-seven" class="hide">
+      <img src="images/mochi-7.png" alt="" />
     </div>
 
     <script
@@ -26,13 +38,33 @@
     ></script>
 
     <script>
-      $(this).click(function () {
-        $(this).addClass('hide')
-        $('scene').not(this).removeClass('hide')
+      $("#scene-one").click(function () {
+        $("#scene-one").toggleClass("hide");
+        $("#scene-two").toggleClass("hide");
       });
       $("#scene-two").click(function () {
         $("#scene-two").toggleClass("hide");
         $("#scene-three").toggleClass("hide");
+      });
+      $("#scene-three").click(function () {
+        $("#scene-three").toggleClass("hide");
+        $("#scene-four").toggleClass("hide");
+      });
+      $("#scene-four").click(function () {
+        $("#scene-four").toggleClass("hide");
+        $("#scene-five").toggleClass("hide");
+      });
+      $("#scene-five").click(function () {
+        $("#scene-five").toggleClass("hide");
+        $("#scene-six").toggleClass("hide");
+      });
+      $("#scene-six").click(function () {
+        $("#scene-six").toggleClass("hide");
+        $("#scene-seven").toggleClass("hide");
+      });
+      $("#scene-seven").click(function () {
+        $("#scene-seven").toggleClass("hide");
+        $("#scene-one").toggleClass("hide");
       });
     </script>
   </body>
