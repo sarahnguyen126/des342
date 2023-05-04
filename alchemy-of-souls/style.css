@@ -1,0 +1,124 @@
+h1 {
+  font-family: pyeonghwa, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 270px;
+  text-align: center;
+
+  margin: 40px 0 15px 0;
+}
+
+h2 {
+  font-family: "arboria", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 32px;
+  letter-spacing: 0.14em;
+  text-align: center;
+
+  margin: 0px;
+  padding: 0 0 20px 0;
+}
+
+p.text {
+  font-family: "Arboria";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+
+  padding: 22px 54px 0 50px;
+}
+
+button {
+  background-color: #f4f0e9;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.next-button {
+  font-family: "Arboria";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.065em;
+
+  width: 73px;
+  align-self: flex-end;
+  margin-right: 42px;
+  margin-top: -18px;
+}
+
+.next-button:hover {
+  color: orchid;
+}
+
+body {
+  margin: 0px;
+}
+
+.screen {
+  background-image: url(images/backgrounds/palace-1-edited.png);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: auto;
+}
+
+#homepage-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+#ju-start {
+  width: auto;
+  height: 92vh;
+}
+#middle-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-right: 20px;
+}
+
+#start-button {
+  padding: 0 0 60px 0;
+}
+
+#md-start {
+  width: auto;
+  height: 78vh;
+}
+
+/* INTRO */
+
+#intro-scene {
+  background-image: url(images/backgrounds/winter-1.png);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#ice-stone-1 {
+  height: 18%;
+  width: auto;
+  padding: 80px 60px 0 86px;
+}
+
+.textbox-large {
+  width: 536px;
+  height: 246px;
+  background-image: url(images/elements/textbox-large.png);
+  background-size: contain;
+
+  display: flex;
+  flex-direction: column;
+  margin: 120px 0 0 0;
+}
+
+#ju-intro {
+  height: 90vh;
+  align-self: flex-end;
+}
