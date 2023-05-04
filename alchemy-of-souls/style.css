@@ -54,6 +54,15 @@ button {
   color: orchid;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
 body {
   margin: 0px;
 }
@@ -85,7 +94,20 @@ body {
 }
 
 #start-button {
-  padding: 0 0 60px 0;
+  width: 254px;
+  height: 128px;
+  background-image: url(images/elements/start-button.svg);
+  background-size: 100% 100%;
+  background-color: unset;
+  border: none;
+
+  margin: 0 0 80px 0;
+  padding: 0 0 6px 0;
+  font-family: "Arboria";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.03em;
 }
 
 #md-start {
@@ -99,6 +121,10 @@ body {
   background-image: url(images/backgrounds/winter-1.png);
   display: flex;
   justify-content: space-evenly;
+}
+
+.hide {
+  display: none;
 }
 
 #ice-stone-1 {
@@ -121,4 +147,29 @@ body {
 #ju-intro {
   height: 90vh;
   align-self: flex-end;
+}
+
+/* POISON SCENE */
+
+#poison-scene {
+  background-image: url(images/backgrounds/poison-scene.png);
+}
+
+#poison-textbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#poison-bottle-container {
+  width: 111px;
+  height: 191px;
+  background-image: url(images/elements/poison-bottle.png);
+  background-size: contain;
+
+}
+
+#poison-text {
+  width: 50%;
+  padding: 0;
 }

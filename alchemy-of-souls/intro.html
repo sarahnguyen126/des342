@@ -12,14 +12,32 @@
     <div class="screen" id="intro-scene">
       <img id="ice-stone-1" src="images/elements/ice-stone.png" alt="" />
       <div class="textbox-large">
-        <p class="text">
+        <p class="text" id="intro-text-1">
           In the vast kingdom of Daeho Fortress, there lives a guy name Jang-Uk.
           As the eldest son of the Jang family, he is the candidate for the next
           Gwanju position.
+        </p>
+        <p class="text hide" id="intro-text-2">
+          Due to his dazzling cold charms, Jang-Uk represents the Winter of the
+          Four Seasons, a group of heirs of the most well-known mages families
+          in Daeho.
         </p>
         <button class="next-button">NEXT ></button>
       </div>
       <img id="ju-intro" src="images/characters/jang-uk/ju-intro.png" alt="" />
     </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $("#intro-text-1").click(function () {
+        $("#intro-text-1").toggleClass("hide");
+        $("#intro-text-2").toggleClass("hide");
+      });
+    </script>
   </body>
 </html>
