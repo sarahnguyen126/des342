@@ -7,25 +7,58 @@
     <title>Introduction</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/qhb7xyx.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <div class="screen" id="intro-scene">
       <img id="ice-stone-1" src="images/elements/ice-stone.png" alt="" />
-      <div class="textbox-large">
+
+      <div class="textbox-large" id="textbox-intro">
         <p class="text" id="intro-text-1">
-          In the vast kingdom of Daeho Fortress, there lives a guy name Jang-Uk.
-          As the eldest son of the Jang family, he is the candidate for the next
-          Gwanju position.
+          In the vast kingdom of Daeho Fortress, there lives a guy name
+          <strong>Jang-Uk</strong>. As the eldest son of the Jang family, he is
+          the candidate for the next Gwanju position.
         </p>
         <p class="text hide" id="intro-text-2">
-          Due to his dazzling cold charms, Jang-Uk represents the Winter of the
-          Four Seasons, a group of heirs of the most well-known mages families
-          in Daeho.
+          Due to his dazzling cold charms, Jang-Uk represents the
+          <strong>Winter</strong> of the Four Seasons, a group of heirs of the
+          most well-known mages families in Daeho.
         </p>
-        <button class="next-button">NEXT ></button>
+        <p class="text hide" id="intro-text-3">
+          With his passionate love for his lover, Mu-Deok, Jang-Uk wanted to
+          find the <strong>Ice Stone</strong> to help her stay alive. However,
+          in order to possess the Ice Stone, he must know how to use spells.
+        </p>
+        <p class="text hide" id="intro-text-4">
+          To be able to use spells, he must <strong>swallow poison</strong>, so
+          that his gate of energy can be opened by Master Heo. Though dangerous,
+          this is the only way to open his gate of energy...
+        </p>
+        <button class="next-button" id="next-button-intro-1">NEXT ></button>
+        <button class="next-button hide" id="next-button-intro-2">
+          NEXT >
+        </button>
+        <button class="next-button hide" id="next-button-intro-3">
+          NEXT >
+        </button>
+
+        <button class="next-button hide" id="next-button-intro-4">
+          <a href="poison.html"> NEXT ></a>
+        </button>
       </div>
+
       <img id="ju-intro" src="images/characters/jang-uk/ju-intro.png" alt="" />
     </div>
+
+    <img
+      class="hide animate__animated animate__slideInLeft"
+      id="md-intro"
+      src="images/characters/mudeok/md-intro.png"
+      alt=""
+    />
 
     <script
       src="https://code.jquery.com/jquery-3.6.4.min.js"
@@ -34,9 +67,26 @@
     ></script>
 
     <script>
-      $("#intro-text-1").click(function () {
+      $("#next-button-intro-1").click(function () {
         $("#intro-text-1").toggleClass("hide");
         $("#intro-text-2").toggleClass("hide");
+        $("#next-button-intro-1").toggleClass("hide");
+        $("#next-button-intro-2").toggleClass("hide");
+      });
+
+      $("#next-button-intro-2").click(function () {
+        $("#intro-text-2").toggleClass("hide");
+        $("#intro-text-3").toggleClass("hide");
+        $("#next-button-intro-2").toggleClass("hide");
+        $("#next-button-intro-3").toggleClass("hide");
+        $("#md-intro").toggleClass("hide");
+      });
+
+      $("#next-button-intro-3").click(function () {
+        $("#intro-text-3").toggleClass("hide");
+        $("#intro-text-4").toggleClass("hide");
+        $("#next-button-intro-3").toggleClass("hide");
+        $("#next-button-intro-4").toggleClass("hide");
       });
     </script>
   </body>
