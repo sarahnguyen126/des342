@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jang-Uk Drinking Poison</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/qhb7xyx.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <div class="screen" id="poison-1"></div>
+
+    <div
+      class="screen hide animate__animated animate__fadeIn"
+      id="poison-2"
+    ></div>
+
+    <div
+      class="screen hide animate__animated animate__fadeIn"
+      id="poison-3"
+    ></div>
+
+    <div
+      class="screen hide animate__animated animate__fadeIn"
+      id="poison-4"
+    ></div>
+
+    <div
+      class="screen hide animate__animated animate__fadeIn"
+      id="poison-5"
+    ></div>
+
+    <div class="textbox-small screencaps-textbox" id="poison-text-1-container">
+      <p class="text-small" id="poison-text-1">Jang-Uk starts drinking</p>
+      <button class="next-button-small" id="next-button-poison-1">
+        NEXT >
+      </button>
+
+      <p class="text-small hide" id="poison-text-2">Oh no..</p>
+      <button class="next-button-small hide" id="next-button-poison-2">
+        NEXT >
+      </button>
+
+      <p class="text-small hide" id="poison-text-3">Mm..m...m-m...</p>
+      <button class="next-button-small hide" id="next-button-poison-3">
+        NEXT >
+      </button>
+
+      <p class="text-small hide" id="poison-text-4">?@*^$&^$!@$^%@#$</p>
+      <button class="next-button-small hide" id="next-button-poison-4">
+        NEXT >
+      </button>
+    </div>
+
+    <div class="textbox-large hide" id="poison-text-5-container">
+      <p class="text" id="poison-text-5">
+        Jang-Uk passed out after swallowing the poison. Given only 12 hours to
+        find the cure, Master Heo decided to
+        <strong>open his gate of energy</strong> to save him from the poison.
+      </p>
+      <button class="next-button" id="next-button-poison-5">NEXT ></button>
+
+      <p class="text hide" id="poison-text-6">
+        As Jang-Uk’s gate of energy is now opened, he can finally
+        <strong>learn how to use spells</strong> and officially became a mage.
+        He risked his life but he got what he wanted.
+      </p>
+      <button class="next-button hide" id="next-button-poison-6">
+        <a href="hot-cold.html"> NEXT ></a>
+      </button>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $("#next-button-poison-1").click(function () {
+        $("#poison-1").toggleClass("hide");
+        $("#poison-2").toggleClass("hide");
+        $("#poison-text-1").toggleClass("hide");
+        $("#poison-text-2").toggleClass("hide");
+        $("#next-button-poison-1").toggleClass("hide");
+        $("#next-button-poison-2").toggleClass("hide");
+      });
+
+      $("#next-button-poison-2").click(function () {
+        $("#poison-2").toggleClass("hide");
+        $("#poison-3").toggleClass("hide");
+        $("#poison-text-2").toggleClass("hide");
+        $("#poison-text-3").toggleClass("hide");
+        $("#next-button-poison-2").toggleClass("hide");
+        $("#next-button-poison-3").toggleClass("hide");
+      });
+
+      $("#next-button-poison-3").click(function () {
+        $("#poison-3").toggleClass("hide");
+        $("#poison-4").toggleClass("hide");
+        $("#poison-text-3").toggleClass("hide");
+        $("#poison-text-4").toggleClass("hide");
+        $("#next-button-poison-3").toggleClass("hide");
+        $("#next-button-poison-4").toggleClass("hide");
+      });
+
+      $("#next-button-poison-4").click(function () {
+        $("#poison-4").toggleClass("hide");
+        $("#poison-5").toggleClass("hide");
+        $("#poison-text-4").toggleClass("hide");
+        $("#next-button-poison-4").toggleClass("hide");
+        $("#poison-text-1-container").toggleClass("hide");
+        $("#poison-text-5-container").toggleClass("hide");
+      });
+
+      $("#next-button-poison-5").click(function () {
+        $("#poison-text-5").toggleClass("hide");
+        $("#poison-text-6").toggleClass("hide");
+        $("#next-button-poison-5").toggleClass("hide");
+        $("#next-button-poison-6").toggleClass("hide");
+      });
+    </script>
+  </body>
+</html>

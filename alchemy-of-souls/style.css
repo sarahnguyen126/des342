@@ -30,6 +30,32 @@ h2 {
   flex-direction: column;
 }
 
+.textbox-long {
+  width: 499px;
+  height: 146px;
+  background-image: url(images/elements/textbox-long.png);
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.textbox-small {
+  width: 306px;
+  height: 147px;
+  background-image: url(images/elements/textbox-small.png);
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.screencaps-textbox {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+}
+
 p.text {
   font-family: "Arboria";
   font-style: normal;
@@ -38,6 +64,15 @@ p.text {
   line-height: 160%;
 
   padding: 22px 54px 0 50px;
+}
+
+p.text-small {
+  font-family: "Arboria";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+
+  padding: 19px 40px 0 40px;
 }
 
 button {
@@ -60,7 +95,37 @@ button {
   margin-top: -16px;
 }
 
-.next-button:hover {
+.next-button-2 {
+  font-family: "Arboria";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.065em;
+
+  width: 73px;
+  align-self: flex-end;
+  margin-right: 42px;
+  margin-top: 18px;
+}
+
+.next-button-small {
+  font-family: "Arboria";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.065em;
+
+  width: 73px;
+  align-self: flex-end;
+  margin-right: 36px;
+  margin-top: -7px;
+}
+
+.next-button:hover,
+.next-button-2:hover,
+.next-button-small:hover {
   color: orchid;
   cursor: pointer;
 }
@@ -68,6 +133,13 @@ button {
 a {
   color: black;
   text-decoration: none;
+}
+
+.hot-cold-text {
+  font-family: "Arboria";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
 }
 
 a:hover {
@@ -184,7 +256,6 @@ body {
   justify-content: space-evenly;
 }
 
-
 #poison-bottle-container {
   width: 100px;
   height: 172px;
@@ -206,7 +277,101 @@ body {
 }
 
 #ju-poison {
-    height: 85vh;
-    width: auto;
-    align-self: flex-end;
+  height: 85vh;
+  width: auto;
+  align-self: flex-end;
+}
+
+/* POISON SCENE SCREENCAPS */
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+}
+
+#poison-1 {
+  background-image: url(images/characters/jang-uk/Drinking-Poison-Screencaps/poison-1.png);
+}
+
+#poison-2 {
+  background-image: url(images/characters/jang-uk/Drinking-Poison-Screencaps/poison-2.png);
+}
+
+#poison-3 {
+  background-image: url(images/characters/jang-uk/Drinking-Poison-Screencaps/poison-3.png);
+}
+
+#poison-4 {
+  background-image: url(images/characters/jang-uk/Drinking-Poison-Screencaps/poison-4.png);
+}
+
+#poison-5 {
+  background-image: none;
+  background-color: #262725;
+}
+
+#poison-text-5-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Translate the div back up and left by half its own width and height */
+}
+
+/* HOT COLD CHALLENGE */
+
+#hot-cold-scene {
+  background-image: url(images/backgrounds/room.png);
+  display: flex;
+  justify-content: space-around;
+}
+
+#textbox-hot-cold {
+  margin: 160px 0 0 120px;
+}
+
+#ju-hot-cold {
+  height: 85vh;
+  width: auto;
+  align-self: flex-end;
+}
+
+#guessing-challenge {
+  background-color: #f4f0e9;
+  background-image: url(images/backgrounds/white-concrete-wall.png);
+  display: flex;
+}
+
+#hot-container {
+  width: 170px;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#hot-text {
+  padding-right: 10px;
+  margin: 8px 0 0 0;
+}
+
+.hot-cold-picture-container {
+  height: 60vh;
+  width: 50vw;
+  background-size: cover;
+  border: 14px solid #9BCDC9;
+}
+
+#hot-cold-1 {
+  background-image: url(images/characters/jang-uk/Hot-Cold-Screencaps/hot-cold-1.png);
+}
+
+#hot-cold-2 {
+  background-image: url(images/characters/jang-uk/Hot-Cold-Screencaps/hot-cold-2.png);
+}
+
+#hot-cold-3 {
+  background-image: url(images/characters/jang-uk/Hot-Cold-Screencaps/hot-cold-3.png);
 }

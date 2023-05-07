@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hot & Cold Challenge</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/qhb7xyx.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <div class="screen" id="hot-cold-scene">
+      <div class="textbox-large" id="textbox-hot-cold">
+        <p class="text" id="hot-cold-text-1">
+          Now that Jang-Uk has become a mage, he must first endure the hotness
+          and coldness of the energy in order to use them.
+        </p>
+        <p class="text hide" id="hot-cold-text-2">
+          On the next screen, you must guess correctly if Jang-Uk is hot or
+          cold. You can only move on once you've made the correct guess.
+        </p>
+        <button class="next-button-2" id="next-button-hot-cold-1">
+          NEXT >
+        </button>
+        <button class="next-button-2 hide" id="next-button-hot-cold-2">
+          NEXT >
+        </button>
+      </div>
+
+      <img
+        id="ju-hot-cold"
+        src="images/characters/jang-uk/ju-hot-cold.png"
+        alt=""
+      />
+    </div>
+
+    <div class="screen" id="guessing-challenge">
+      <div id="hot-container">
+        <svg
+          class="hot"
+          width="149"
+          height="206"
+          viewBox="0 0 149 206"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_d_25_254)">
+            <path
+              d="M2.65442 142.169C1.85127 173.224 23.514 190.804 34.4458 195.713H103.383C118.442 187.012 133.501 175.968 138.521 135.476C142.536 103.083 120.338 79.5905 108.737 71.8937C109.54 93.0433 98.8093 100.785 93.3434 102.012C119.847 55.1614 82.3001 16.0078 60.2135 2.28735C63.5599 19.3543 59.8788 37.7598 42.4773 60.1811C25.0757 82.6023 3.65836 103.35 2.65442 142.169Z"
+              fill="#F25B2A"
+            />
+            <path
+              d="M54.7467 146.854C44.038 169.61 48.723 188.908 52.4041 195.712H87.8765C98.3175 181.791 91.1114 157.34 86.2033 146.854L70.4749 112.051C69.6941 114.17 65.4553 124.098 54.7467 146.854Z"
+              fill="#FCB041"
+            />
+          </g>
+          <defs>
+            <filter
+              id="filter0_d_25_254"
+              x="0.63269"
+              y="0.287354"
+              width="148.367"
+              height="205.425"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dx="4" dy="4" />
+              <feGaussianBlur stdDeviation="3" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_25_254"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_25_254"
+                result="shape"
+              />
+            </filter>
+          </defs>
+        </svg>
+
+        <p class="hot-cold-text" id="hot-text">HOT</p>
+      </div>
+
+      <div>
+        <div class="hot-cold-picture-container" id="hot-cold-1"></div>
+        <div class="hot-cold-picture-container hide" id="hot-cold-2"></div>
+        <div class="hot-cold-picture-container hide" id="hot-cold-3"></div>
+
+        <div class="textbox-long">
+          <p class="text">
+            Click the icon to guess how Jang-Uk feels right now.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("#next-button-hot-cold-1").click(function () {
+        $("#hot-cold-text-1").toggleClass("hide");
+        $("#hot-cold-text-2").toggleClass("hide");
+        $("#next-button-hot-cold-1").toggleClass("hide");
+        $("#next-button-hot-cold-2").toggleClass("hide");
+      });
+    </script>
+  </body>
+</html>
