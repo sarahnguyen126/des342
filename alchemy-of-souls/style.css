@@ -1,3 +1,7 @@
+.hide {
+  display: none;
+}
+
 h1 {
   font-family: pyeonghwa, sans-serif;
   font-style: normal;
@@ -238,9 +242,6 @@ body {
   padding-left: 80px;
 }
 
-.hide {
-  display: none;
-}
 
 #ice-stone-1 {
   height: 16vh;
@@ -482,17 +483,20 @@ body {
 #to-danhyanggok-scene-1 {
   background-image: url(images/backgrounds/to-danhyanggok-1.png);
   background-position: left;
-  display: flex;
-  align-items: flex-end;
 }
 
 #to-danhyanggok-1 {
   height: 76vh;
   width: auto;
+position: absolute;
+bottom: 0%;
+left: 0%;
 }
 
 #textbox-to-danhyanggok-1 {
-  margin: 0 0 50px 46px;
+  position: absolute;
+  bottom: 7%;
+  right: 6%;
 }
 
 #to-danhyanggok-text-1 {
@@ -503,3 +507,4 @@ body {
 #to-danhyanggok-scene-2 {
   background-image: url(images/backgrounds/to-danhyanggok-2.png);
 }
+

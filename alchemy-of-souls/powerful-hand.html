@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Powerful Hand</title>
-
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/qhb7xyx.css" />
   </head>
@@ -31,22 +30,11 @@
         <button class="next-button" id="next-button-powerful-hand-1">
           NEXT >
         </button>
-        <button class="next-button-2 hide" id="next-button-powerful-hand-2"> NEXT ></button>
+        <button class="next-button-2 hide" id="next-button-powerful-hand-2"> <a href="to-danhyanggok.html"> NEXT ></a></button>
       </div>
     </div>
 
-    <div class="screen hide" id="to-danhyanggok-scene-1">
-        <img id="to-danhyanggok-1" src="images/characters/together/to-danhyanggok.png" alt="">
 
-        <div class="textbox-long" id="textbox-to-danhyanggok-1">
-            <p class="text-long" id="to-danhyanggok-text-1">So off they go, to Danhyanggok...</p>
-            <button class="next-button-long" id="next-button-to-danhyanngok-1" >NEXT ></button>
-        </div>
-    </div>
-
-    <div class="screen hide" id="to-danhyanggok-scene-2">
-
-    </div>
 
     <script
     src="https://code.jquery.com/jquery-3.6.4.min.js"
@@ -60,14 +48,6 @@
         $("#powerful-hand-text-2").toggleClass("hide");
         $("#next-button-powerful-hand-1").toggleClass("hide");
         $("#next-button-powerful-hand-2").toggleClass("hide");
-      });
-
-      $("#next-button-powerful-hand-2").click(function () {
-        $("#powerful-hand-scene").toggleClass("hide");
-      });
-
-      $("#next-button-to-danhyanngok-1").click(function () {
-        $("#to-danhyanggok-scene-2").toggleClass("hide");
       });
   </script>
   </body>
