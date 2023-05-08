@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hot Cold Guessing Challenge</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/qhb7xyx.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <div class="screen" id="guessing-challenge">
+      <div class="hot-container">
+        <svg
+          id="hot-icon-1"
+          width="149"
+          height="206"
+          viewBox="0 0 149 206"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_d_25_254)">
+            <path
+              d="M2.65442 142.169C1.85127 173.224 23.514 190.804 34.4458 195.713H103.383C118.442 187.012 133.501 175.968 138.521 135.476C142.536 103.083 120.338 79.5905 108.737 71.8937C109.54 93.0433 98.8093 100.785 93.3434 102.012C119.847 55.1614 82.3001 16.0078 60.2135 2.28735C63.5599 19.3543 59.8788 37.7598 42.4773 60.1811C25.0757 82.6023 3.65836 103.35 2.65442 142.169Z"
+              fill="#F25B2A"
+            />
+            <path
+              d="M54.7467 146.854C44.038 169.61 48.723 188.908 52.4041 195.712H87.8765C98.3175 181.791 91.1114 157.34 86.2033 146.854L70.4749 112.051C69.6941 114.17 65.4553 124.098 54.7467 146.854Z"
+              fill="#FCB041"
+            />
+          </g>
+          <defs>
+            <filter
+              id="filter0_d_25_254"
+              x="0.63269"
+              y="0.287354"
+              width="148.367"
+              height="205.425"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dx="4" dy="4" />
+              <feGaussianBlur stdDeviation="3" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_25_254"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_25_254"
+                result="shape"
+              />
+            </filter>
+          </defs>
+        </svg>
+
+        <svg
+          class="hide"
+          id="hot-icon-2"
+          width="149"
+          height="206"
+          viewBox="0 0 149 206"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_d_25_254)">
+            <path
+              d="M2.65442 142.169C1.85127 173.224 23.514 190.804 34.4458 195.713H103.383C118.442 187.012 133.501 175.968 138.521 135.476C142.536 103.083 120.338 79.5905 108.737 71.8937C109.54 93.0433 98.8093 100.785 93.3434 102.012C119.847 55.1614 82.3001 16.0078 60.2135 2.28735C63.5599 19.3543 59.8788 37.7598 42.4773 60.1811C25.0757 82.6023 3.65836 103.35 2.65442 142.169Z"
+              fill="#F25B2A"
+            />
+            <path
+              d="M54.7467 146.854C44.038 169.61 48.723 188.908 52.4041 195.712H87.8765C98.3175 181.791 91.1114 157.34 86.2033 146.854L70.4749 112.051C69.6941 114.17 65.4553 124.098 54.7467 146.854Z"
+              fill="#FCB041"
+            />
+          </g>
+          <defs>
+            <filter
+              id="filter0_d_25_254"
+              x="0.63269"
+              y="0.287354"
+              width="148.367"
+              height="205.425"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dx="4" dy="4" />
+              <feGaussianBlur stdDeviation="3" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_25_254"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_25_254"
+                result="shape"
+              />
+            </filter>
+          </defs>
+        </svg>
+
+        <p class="hot-cold-text" id="hot-text">HOT</p>
+      </div>
+
+      <div id="hot-cold-center-box">
+        <div class="hot-cold-picture-container" id="hot-cold-1"></div>
+        <div class="hot-cold-picture-container hide" id="hot-cold-2"></div>
+        <div class="hot-cold-picture-container hide" id="hot-cold-3"></div>
+
+        <div class="textbox-long" id="textbox-hot-cold-2">
+          <p class="text" id="hot-cold-text-3">
+            Click the icon to guess how Jang-Uk feels right now.
+          </p>
+        </div>
+      </div>
+
+      <div class="cold-container">
+        <svg
+          id="cold-icon-1"
+          width="165"
+          height="180"
+          viewBox="0 0 165 180"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_d_25_342)">
+            <path
+              d="M80.9019 73.5992C81.9808 74.1187 83.2356 74.1275 84.3216 73.6233L93.107 69.5443L93.7597 80.314C93.8337 81.5359 94.4632 82.6566 95.4681 83.3556L102.336 88.1334L95.4681 92.9112C94.4728 93.6036 93.8452 94.7101 93.7618 95.9196L93.1543 104.729L84.3216 100.628C83.2356 100.124 81.9808 100.133 80.9019 100.652L72.6178 104.641L72.0164 95.9196C71.9327 94.7069 71.3021 93.598 70.3027 92.9061L61.7658 86.9959L69.4182 81.2566C70.2722 80.6161 70.8348 79.6607 70.9806 78.6032L72.2457 69.4314L80.9019 73.5992Z"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M63.9954 36.7422L82.1336 47.3228L101.783 36.7422"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M82.6372 71.003V25.6575"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="82.6373"
+              cy="15.5809"
+              r="10.5806"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M63.9954 137.258L82.1336 126.677L101.783 137.258"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M82.6372 102.997V148.342"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="10.5806"
+              cy="10.5806"
+              r="10.5806"
+              transform="matrix(1 0 0 -1 72.0566 169)"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M116.829 46.1704L117.222 67.1654L136.477 78.449"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M97.256 79.908L135.99 56.3311"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="144.598"
+              cy="51.0918"
+              r="10.5806"
+              transform="rotate(58.6718 144.598 51.0918)"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M48.1106 44.0291L47.7178 65.024L28.4631 76.3076"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M67.6837 77.7666L28.9495 54.1897"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="10.5806"
+              cy="10.5806"
+              r="10.5806"
+              transform="matrix(-0.51994 0.854203 0.854203 0.51994 16.8052 34.4111)"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M47.0488 128.437L47.4184 107.441L28.586 95.466"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M67.8336 95.4316L28.269 117.587"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="19.477"
+              cy="122.51"
+              r="10.5806"
+              transform="rotate(-119.248 19.477 122.51)"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M118.451 128.248L118.082 107.252L136.914 95.2771"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M97.6664 95.2426L137.231 117.398"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="10.5806"
+              cy="10.5806"
+              r="10.5806"
+              transform="matrix(0.488589 -0.872514 -0.872514 -0.488589 150.085 136.723)"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+          </g>
+          <defs>
+            <filter
+              id="filter0_d_25_342"
+              x="0.893799"
+              y="0.000244141"
+              width="163.712"
+              height="180"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dy="3" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_25_342"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_25_342"
+                result="shape"
+              />
+            </filter>
+          </defs>
+        </svg>
+
+        <svg
+          class="hide"
+          id="cold-icon-2"
+          width="165"
+          height="180"
+          viewBox="0 0 165 180"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_d_25_342)">
+            <path
+              d="M80.9019 73.5992C81.9808 74.1187 83.2356 74.1275 84.3216 73.6233L93.107 69.5443L93.7597 80.314C93.8337 81.5359 94.4632 82.6566 95.4681 83.3556L102.336 88.1334L95.4681 92.9112C94.4728 93.6036 93.8452 94.7101 93.7618 95.9196L93.1543 104.729L84.3216 100.628C83.2356 100.124 81.9808 100.133 80.9019 100.652L72.6178 104.641L72.0164 95.9196C71.9327 94.7069 71.3021 93.598 70.3027 92.9061L61.7658 86.9959L69.4182 81.2566C70.2722 80.6161 70.8348 79.6607 70.9806 78.6032L72.2457 69.4314L80.9019 73.5992Z"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M63.9954 36.7422L82.1336 47.3228L101.783 36.7422"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M82.6372 71.003V25.6575"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="82.6373"
+              cy="15.5809"
+              r="10.5806"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M63.9954 137.258L82.1336 126.677L101.783 137.258"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M82.6372 102.997V148.342"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="10.5806"
+              cy="10.5806"
+              r="10.5806"
+              transform="matrix(1 0 0 -1 72.0566 169)"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M116.829 46.1704L117.222 67.1654L136.477 78.449"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M97.256 79.908L135.99 56.3311"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="144.598"
+              cy="51.0918"
+              r="10.5806"
+              transform="rotate(58.6718 144.598 51.0918)"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M48.1106 44.0291L47.7178 65.024L28.4631 76.3076"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M67.6837 77.7666L28.9495 54.1897"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="10.5806"
+              cy="10.5806"
+              r="10.5806"
+              transform="matrix(-0.51994 0.854203 0.854203 0.51994 16.8052 34.4111)"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M47.0488 128.437L47.4184 107.441L28.586 95.466"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M67.8336 95.4316L28.269 117.587"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="19.477"
+              cy="122.51"
+              r="10.5806"
+              transform="rotate(-119.248 19.477 122.51)"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M118.451 128.248L118.082 107.252L136.914 95.2771"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M97.6664 95.2426L137.231 117.398"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="10.5806"
+              cy="10.5806"
+              r="10.5806"
+              transform="matrix(0.488589 -0.872514 -0.872514 -0.488589 150.085 136.723)"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+          </g>
+          <defs>
+            <filter
+              id="filter0_d_25_342"
+              x="0.893799"
+              y="0.000244141"
+              width="163.712"
+              height="180"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dy="3" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_25_342"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_25_342"
+                result="shape"
+              />
+            </filter>
+          </defs>
+        </svg>
+
+        <svg
+          class="hide"
+          id="cold-icon-3"
+          width="165"
+          height="180"
+          viewBox="0 0 165 180"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_d_25_342)">
+            <path
+              d="M80.9019 73.5992C81.9808 74.1187 83.2356 74.1275 84.3216 73.6233L93.107 69.5443L93.7597 80.314C93.8337 81.5359 94.4632 82.6566 95.4681 83.3556L102.336 88.1334L95.4681 92.9112C94.4728 93.6036 93.8452 94.7101 93.7618 95.9196L93.1543 104.729L84.3216 100.628C83.2356 100.124 81.9808 100.133 80.9019 100.652L72.6178 104.641L72.0164 95.9196C71.9327 94.7069 71.3021 93.598 70.3027 92.9061L61.7658 86.9959L69.4182 81.2566C70.2722 80.6161 70.8348 79.6607 70.9806 78.6032L72.2457 69.4314L80.9019 73.5992Z"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M63.9954 36.7422L82.1336 47.3228L101.783 36.7422"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M82.6372 71.003V25.6575"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="82.6373"
+              cy="15.5809"
+              r="10.5806"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M63.9954 137.258L82.1336 126.677L101.783 137.258"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M82.6372 102.997V148.342"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="10.5806"
+              cy="10.5806"
+              r="10.5806"
+              transform="matrix(1 0 0 -1 72.0566 169)"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M116.829 46.1704L117.222 67.1654L136.477 78.449"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M97.256 79.908L135.99 56.3311"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="144.598"
+              cy="51.0918"
+              r="10.5806"
+              transform="rotate(58.6718 144.598 51.0918)"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M48.1106 44.0291L47.7178 65.024L28.4631 76.3076"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M67.6837 77.7666L28.9495 54.1897"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="10.5806"
+              cy="10.5806"
+              r="10.5806"
+              transform="matrix(-0.51994 0.854203 0.854203 0.51994 16.8052 34.4111)"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M47.0488 128.437L47.4184 107.441L28.586 95.466"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M67.8336 95.4316L28.269 117.587"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="19.477"
+              cy="122.51"
+              r="10.5806"
+              transform="rotate(-119.248 19.477 122.51)"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M118.451 128.248L118.082 107.252L136.914 95.2771"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M97.6664 95.2426L137.231 117.398"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="10.5806"
+              cy="10.5806"
+              r="10.5806"
+              transform="matrix(0.488589 -0.872514 -0.872514 -0.488589 150.085 136.723)"
+              stroke="#269DC2"
+              stroke-width="8"
+              stroke-linejoin="round"
+            />
+          </g>
+          <defs>
+            <filter
+              id="filter0_d_25_342"
+              x="0.893799"
+              y="0.000244141"
+              width="163.712"
+              height="180"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dy="3" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_25_342"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_25_342"
+                result="shape"
+              />
+            </filter>
+          </defs>
+        </svg>
+
+        <p class="hot-cold-text" id="cold-text">COLD</p>
+      </div>
+
+      <div class="textbox-long hide" id="hot-cold-congrats">
+        <p class="text-long">Congratulations, you've guessed it all!</p>
+        <button class="next-button-long"> <a href="powerful-hand.html"> NEXT ></a></button>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("#hot-icon-1").click(function () {
+        $("#hot-cold-1").toggleClass("hide");
+        $("#hot-cold-2").toggleClass("hide");
+        $("#hot-icon-1").toggleClass("hide");
+        $("#hot-icon-2").toggleClass("hide");
+        $("#cold-icon-1").toggleClass("hide");
+        $("#cold-icon-2").toggleClass("hide");
+      });
+
+      $("#cold-icon-1").click(function () {
+        $("#guessing-challenge").toggleClass(
+          "animate__animated animate__shakeX"
+        );
+      });
+
+      $("#hot-icon-2").click(function () {
+        $("#guessing-challenge").toggleClass(
+          "animate__animated animate__shakeX"
+        );
+      });
+
+      $("#cold-icon-2").click(function () {
+        $("#hot-cold-2").toggleClass("hide");
+        $("#hot-cold-3").toggleClass("hide");
+        $("#cold-icon-2").toggleClass("hide");
+        $("#cold-icon-3").toggleClass("hide");
+      });
+
+      $("#cold-icon-3").click(function () {
+        $("#hot-cold-center-box").toggleClass("hide");
+        $("#hot-icon-2").toggleClass("hide");
+        $("#cold-icon-3").toggleClass("hide");
+        $("#hot-text").toggleClass("hide");
+        $("#cold-text").toggleClass("hide");
+        $("#hot-cold-congrats").toggleClass("hide");
+
+        $("#hot-cold-congrats").addClass("animate__animated animate__tada");
+      });
+
+      $("#hot-cold-congrats").click(function () {
+        $("#hot-cold-congrats").toggleClass("animate__animated animate__tada");
+      });
+    </script>
+  </body>
+</html>

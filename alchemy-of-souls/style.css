@@ -71,8 +71,20 @@ p.text-small {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
+  line-height: 155%;
 
   padding: 19px 40px 0 40px;
+}
+
+p.text-long {
+  font-family: "Arboria";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+
+  text-align: center;
+  padding: 20px 5px 0 0px;
 }
 
 button {
@@ -91,8 +103,8 @@ button {
 
   width: 73px;
   align-self: flex-end;
-  margin-right: 42px;
-  margin-top: -16px;
+  margin-right: 38px;
+  margin-top: -14px;
 }
 
 .next-button-2 {
@@ -105,7 +117,7 @@ button {
 
   width: 73px;
   align-self: flex-end;
-  margin-right: 42px;
+  margin-right: 38px;
   margin-top: 18px;
 }
 
@@ -123,9 +135,24 @@ button {
   margin-top: -7px;
 }
 
+.next-button-long {
+  font-family: "Arboria";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.065em;
+
+  width: 73px;
+  align-self: flex-end;
+  margin-right: 32px;
+  margin-top: -12px;
+}
+
 .next-button:hover,
 .next-button-2:hover,
-.next-button-small:hover {
+.next-button-small:hover,
+.next-button-long:hover {
   color: orchid;
   cursor: pointer;
 }
@@ -338,18 +365,29 @@ body {
   align-self: flex-end;
 }
 
+/* GUESSING CHALLENGE */
+
 #guessing-challenge {
   background-color: #f4f0e9;
   background-image: url(images/backgrounds/white-concrete-wall.png);
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#hot-container {
+.hot-container {
   width: 170px;
   height: 230px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  padding: 0 0 35px 90px;
+}
+
+.hot-container:hover,
+.cold-container:hover {
+  cursor: pointer;
 }
 
 #hot-text {
@@ -361,7 +399,14 @@ body {
   height: 60vh;
   width: 50vw;
   background-size: cover;
-  border: 14px solid #9BCDC9;
+  background-position: center;
+  border: 14px solid #9bcdc9;
+
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-49%, -50%);
+  z-index: 1;
 }
 
 #hot-cold-1 {
@@ -374,4 +419,87 @@ body {
 
 #hot-cold-3 {
   background-image: url(images/characters/jang-uk/Hot-Cold-Screencaps/hot-cold-3.png);
+}
+
+#textbox-hot-cold-2 {
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+#hot-cold-text-3 {
+  text-align: center;
+  margin: 13px 0px 0px 0px;
+}
+
+.cold-container {
+  width: 140px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0px 90px 10px 0;
+}
+
+#cold-text {
+  margin: 6px 0 0 0;
+}
+
+#hot-cold-congrats {
+  position: absolute;
+  left: 35%;
+}
+
+/* POWERFUL HAND */
+
+#powerful-hand-scene {
+  background-image: url(images/backgrounds/yard-1.png);
+  background-position: left;
+}
+
+#powerful-hand {
+  height: 85vh;
+  width: auto;
+
+  position: absolute;
+  bottom: 0%;
+  left: 4%;
+  z-index: 2;
+}
+
+#textbox-powerful-hand {
+  position: absolute;
+  top: 26%;
+  left: 58%;
+  z-index: 1;
+}
+
+/* LEAVING DANHYANGGOK */
+
+#to-danhyanggok-scene-1 {
+  background-image: url(images/backgrounds/to-danhyanggok-1.png);
+  background-position: left;
+  display: flex;
+  align-items: flex-end;
+}
+
+#to-danhyanggok-1 {
+  height: 76vh;
+  width: auto;
+}
+
+#textbox-to-danhyanggok-1 {
+  margin: 0 0 50px 46px;
+}
+
+#to-danhyanggok-text-1 {
+  text-align: left;
+  padding-left: 52px;
+}
+
+#to-danhyanggok-scene-2 {
+  background-image: url(images/backgrounds/to-danhyanggok-2.png);
 }
