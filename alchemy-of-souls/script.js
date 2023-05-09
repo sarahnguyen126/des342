@@ -56,3 +56,13 @@ target.addEventListener("drop", (event) => {
     window.location = url;
   }
 });
+
+// CODE TO REDUCE OPACITY WHEN CLICKED
+
+const myElement = document.getElementById("evil-spirit-1");
+
+myElement.addEventListener("click", function () {
+  const currentOpacity = parseFloat(myElement.style.opacity);
+  const newOpacity = currentOpacity - 0.1; // decrease opacity by 0.1
+  myElement.style.opacity = newOpacity.toString();
+});
