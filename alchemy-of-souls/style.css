@@ -502,18 +502,53 @@ body {
 
 #to-danhyanggok-scene-2 {
   background-image: url(images/backgrounds/to-danhyanggok-2.png);
-  display: flex;
 }
 
 #to-danhyanggok-2 {
-  height: 85vh;
+  height: 89vh;
   width: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+
+#textbox-to-danhyanggok-2 {
+  position: relative;
+  top: 80px;
+  left: 300px;
+  z-index: 2;
 }
 
 #evil-spirit-1 {
-  height: 40vh;
+  height: 55vh;
   width: auto;
-  opacity: 1.0;
+  opacity: 1;
+
+  position: absolute;
+  left: 48%;
+  bottom: 0;
+  z-index: 2;
+}
+
+#evil-spirit-2 {
+  height: 52vh;
+  width: auto;
+  opacity: 1;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+}
+
+#evil-spirit-3 {
+  height: 38vh;
+  width: auto;
+  position: absolute;
+  top: 15%;
+  right: 0;
+  z-index: 1;
 }
 
 .hide {
