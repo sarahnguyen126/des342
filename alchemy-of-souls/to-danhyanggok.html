@@ -10,61 +10,106 @@
   </head>
   <body>
     <div class="screen" id="to-danhyanggok-scene-1">
-      <img id="to-danhyanggok-1" src="images/characters/together/to-danhyanggok.png" alt="" />
+      <img
+        id="tgt-to-danhyanggok"
+        src="images/characters/together/to-danhyanggok.png"
+        alt=""
+      />
 
       <div class="textbox-long" id="textbox-to-danhyanggok-1">
-        <p class="text-long" id="to-danhyanggok-text-1">So off they go, to Danhyanggok...</p>
-        <button class="next-button-long" id="next-button-to-danhyanggok-1">NEXT ></button>
+        <p class="text-long" id="to-danhyanggok-text-1">
+          So off they go, to Danhyanggok...
+        </p>
+        <button class="next-button-long" id="next-button-to-danhyanggok-1">
+          NEXT >
+        </button>
       </div>
     </div>
 
     <div class="screen hide" id="to-danhyanggok-scene-2">
-      <img id="to-danhyanggok-2" src="images/characters/jang-uk/ju-to-danhyanggok.png" alt="" />
+      <img
+        id="ju-to-danhyanggok"
+        src="images/characters/jang-uk/ju-to-danhyanggok.png"
+        alt=""
+      />
 
       <div class="textbox-large" id="textbox-to-danhyanggok-2">
         <p class="text" id="to-danhyanggok-text-2">
-          On his way to Danhyanggok, Jang-Uk encountered a gang of evil spirits trying to feast off him and his lover. He
+          On his way to Danhyanggok, Jang-Uk encountered a gang of evil spirits
+          trying to feast off him and his lover. He
           <strong> must kill </strong> them.
         </p>
-        <button class="next-button-2">NEXT ></button>
+
+        <p class="text hide" id="to-danhyanggok-text-3">
+          <strong>
+            To kill the evil spirits, repeatedly click on them to make them
+            disappear.
+          </strong>
+        </p>
+
+        <button class="next-button-2" id="next-button-to-danhyanggok-2">
+          NEXT >
+        </button>
+        <button class="next-button-3 hide" id="next-button-to-danhyanggok-3">
+          NEXT >
+        </button>
       </div>
 
-      <img id="evil-spirit-1" class="evil-spirit" src="images/characters/evil-spirits/evil-spirit-1.png" alt="" />
+      <img
+        id="evil-spirit-1"
+        class="evil-spirit"
+        src="images/characters/evil-spirits/evil-spirit-1.png"
+        alt=""
+      />
 
-      <img id="evil-spirit-2" class="evil-spirit" src="images/characters/evil-spirits/evil-spirit-2.png" alt="" />
+      <img
+        id="evil-spirit-2"
+        class="evil-spirit"
+        src="images/characters/evil-spirits/evil-spirit-2.png"
+        alt=""
+      />
 
-      <img id="evil-spirit-3" class="evil-spirit" src="images/characters/evil-spirits/evil-spirit-3.png" alt="" />
+      <img
+        id="evil-spirit-3"
+        class="evil-spirit"
+        src="images/characters/evil-spirits/evil-spirit-3.png"
+        alt=""
+      />
     </div>
     <audio id="sword">
-	    <source src="audio/samurai-sword.mp3"></source>
+      <source src="audio/samurai-sword.mp3" />
     </audio>
 
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
 
     <script>
-      $('#next-button-to-danhyanggok-1').click(function () {
-        $('#to-danhyanggok-scene-1').toggleClass('hide')
-        $('#to-danhyanggok-scene-2').toggleClass('hide')
-      })
+      $("#next-button-to-danhyanggok-1").click(function () {
+        $("#to-danhyanggok-scene-1").toggleClass("hide");
+        $("#to-danhyanggok-scene-2").toggleClass("hide");
+      });
+
+      $("#next-button-to-danhyanggok-2").click(function () {
+        $("#to-danhyanggok-text-2").toggleClass("hide");
+        $("#to-danhyanggok-text-3").toggleClass("hide");
+        $("#next-button-to-danhyanggok-2").toggleClass("hide");
+        $("#next-button-to-danhyanggok-3").toggleClass("hide");
+      });
     </script>
     <script>
-    
-      
-      
-let opacityVal = 1.0
-let sword = $("#sword")[0]
-    sword.volume = 0.2
-      $('.evil-spirit').click(function () {
-      
-        opacityVal = opacityVal - 0.1
-        $(this).css('opacity', `${opacityVal}`)
+      let opacityVal = 1.0;
+      let sword = $("#sword")[0];
+      sword.volume = 0.2;
+      $(".evil-spirit").click(function () {
+        opacityVal = opacityVal - 0.1;
+        $(this).css("opacity", `${opacityVal}`);
         // audio stuff
         sword.currentTime = 0;
         sword.play();
-
-      })
+      });
     </script>
-
-    <script src="script.js"></script>
   </body>
 </html>

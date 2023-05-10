@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crown Prince Learning Truth</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/qhb7xyx.css" />
+  </head>
+  <body>
+    <div class="screen" id="cp-learning-truth-scene">
+      <img
+      class="hide"
+        id="cp-learning-truth-1"
+        src="images/characters/crown-prince/cp-learning-truth-1.png"
+        alt=""
+      />
+
+      <div class="textbox-large hide" id="textbox-learning-truth-1">
+        <p class="text" id="learning-truth-text-1">
+          Meanwhile back at Daeho, the Crown Prince learned a secret that Jang
+          Uk was born on the day of the <strong> King's Star,</strong> and he
+          was bound to be a king.
+        </p>
+
+        <p class="text hide" id="learning-truth-text-2">
+          Due to a prophet thousands years ago, the residents of Daeho believe
+          that the king who possessed the King’s Star is the one who can
+          <strong> permanently eliminate the evil spirits.</strong>
+        </p>
+        <p class="text hide" id="learning-truth-text-3">
+          Because of this belief, the Crown King sees Jang-Uk as a threat and
+          <strong> wants to kill him.</strong>
+        </p>
+
+        <button class="next-button" id="next-button-learning-truth-1">
+          NEXT >
+        </button>
+        <button class="next-button hide" id="next-button-learning-truth-2">
+          NEXT >
+        </button>
+        <button class="next-button-3 hide" id="next-button-learning-truth-3">
+          NEXT >
+        </button>
+      </div>
+
+      <img
+        id="cp-learning-truth-2"
+        src="images/characters/crown-prince/cp-learning-truth-2.png"
+        alt=""
+      />
+
+      <img
+        id="ice-stone-learning-truth"
+        src="images/elements/ice-stone.png"
+        alt=""
+      />
+
+      <img
+        id="ju-learning-truth-1"
+        src="images/characters/jang-uk/ju-learning-truth-1.png"
+        alt=""
+      />
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $("#next-button-learning-truth-1").click(function () {
+        $("#learning-truth-text-1").toggleClass("hide");
+        $("#learning-truth-text-2").toggleClass("hide");
+        $("#next-button-learning-truth-1").toggleClass("hide");
+        $("#next-button-learning-truth-2").toggleClass("hide");
+      });
+
+      $("#next-button-learning-truth-2").click(function () {
+        $("#learning-truth-text-2").toggleClass("hide");
+        $("#learning-truth-text-3").toggleClass("hide");
+        $("#next-button-learning-truth-2").toggleClass("hide");
+        $("#next-button-learning-truth-3").toggleClass("hide");
+      });
+    </script>
+  </body>
+</html>

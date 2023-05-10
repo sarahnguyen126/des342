@@ -121,6 +121,20 @@ button {
   margin-top: 18px;
 }
 
+.next-button-3 {
+  font-family: "Arboria";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.065em;
+
+  width: 73px;
+  align-self: flex-end;
+  margin-right: 38px;
+  margin-top: 50px;
+}
+
 .next-button-small {
   font-family: "Arboria";
   font-style: normal;
@@ -145,12 +159,13 @@ button {
 
   width: 73px;
   align-self: flex-end;
-  margin-right: 32px;
-  margin-top: -12px;
+  margin-right: 34px;
+  margin-top: -14px;
 }
 
 .next-button:hover,
 .next-button-2:hover,
+.next-button-3:hover,
 .next-button-small:hover,
 .next-button-long:hover {
   color: orchid;
@@ -481,7 +496,7 @@ body {
   background-position: left;
 }
 
-#to-danhyanggok-1 {
+#tgt-to-danhyanggok {
   height: 76vh;
   width: auto;
   position: absolute;
@@ -492,7 +507,7 @@ body {
 #textbox-to-danhyanggok-1 {
   position: absolute;
   bottom: 7%;
-  right: 6%;
+  right: 4%;
 }
 
 #to-danhyanggok-text-1 {
@@ -504,8 +519,8 @@ body {
   background-image: url(images/backgrounds/to-danhyanggok-2.png);
 }
 
-#to-danhyanggok-2 {
-  height: 89vh;
+#ju-to-danhyanggok {
+  height: 86vh;
   width: auto;
   position: absolute;
   bottom: 0;
@@ -515,9 +530,9 @@ body {
 
 #textbox-to-danhyanggok-2 {
   position: relative;
-  top: 80px;
-  left: 300px;
-  z-index: 2;
+  top: 70px;
+  left: 350px;
+  z-index: 3;
 }
 
 #evil-spirit-1 {
@@ -549,6 +564,42 @@ body {
   top: 15%;
   right: 0;
   z-index: 1;
+}
+
+/* CROWN PRINCE LEARNING TRUTH */
+
+#cp-learning-truth-scene {
+  background-image: url(images/backgrounds/daeho.png);
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cp-learning-truth-1 {
+  height: 92vh;
+  width: auto;
+  align-self: flex-end;
+  padding-right: 60px;
+}
+
+#textbox-learning-truth-1 {
+margin-top: 140px;
+}
+
+#cp-learning-truth-2 {
+  height: 90vh;
+  width: auto;
+}
+
+#ice-stone-learning-truth {
+  height: 20vh;
+  width: auto;
+}
+
+#ju-learning-truth-1 {
+  height: 90vh;
+  width: auto;
 }
 
 .hide {
