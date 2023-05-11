@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mudeok Telling Jang-Uk</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/qhb7xyx.css" />
+  </head>
+  <body>
+    <div class="screen" id="telling-ju-scene">
+      <img
+        id="md-telling-ju"
+        src="images/characters/mudeok/md-telling-ju.png"
+        alt=""
+      />
+
+      <div class="textbox-large" id="textbox-telling-ju-1">
+        <p class="text" id="telling-ju-text-1">
+          Jang Uk accepts the challenge, however Mu-Deok told him that he can
+          only <strong> make it out alive </strong>and defeat the Crown Prince
+          by reaching Chisu.
+        </p>
+        <p class="text hide" id="telling-ju-text-2">
+        <strong>   To reach Chisu, he must first reach Ryusu and fish up a Golden Fish. </strong> 
+          </p>
+    
+        <button class="next-button-2" id="next-button-telling-ju-1">
+          NEXT >
+        </button>
+        <button class="next-button-3 hide" id="next-button-telling-ju-2">
+          <a href="practice.html">  NEXT ></a>
+          </button>
+      </div>
+
+      <img
+        id="ju-telling-ju"
+        src="images/characters/jang-uk/ju-telling-ju.png"
+        alt=""
+      />
+    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    $("#next-button-telling-ju-1").click(function () {
+        $("#telling-ju-text-1").toggleClass("hide");
+        $("#telling-ju-text-2").toggleClass("hide");
+        $("#next-button-telling-ju-1").toggleClass("hide");
+        $("#next-button-telling-ju-2").toggleClass("hide");
+      });
+    </script>
+  </body>
+</html>

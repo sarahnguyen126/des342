@@ -568,7 +568,7 @@ body {
 
 /* CROWN PRINCE LEARNING TRUTH */
 
-#cp-learning-truth-scene {
+#cp-learning-truth-scene-1 {
   background-image: url(images/backgrounds/daeho.png);
   opacity: 0.9;
   display: flex;
@@ -584,22 +584,79 @@ body {
 }
 
 #textbox-learning-truth-1 {
-margin-top: 140px;
+  margin-top: 140px;
+}
+
+#cp-learning-truth-scene-2 {
+  height: 100vh;
+  width: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 #cp-learning-truth-2 {
   height: 90vh;
   width: auto;
+  align-self: flex-end;
+  position: relative;
+  z-index: 1;
 }
 
 #ice-stone-learning-truth {
   height: 20vh;
   width: auto;
+  margin-left: 110px;
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 1;
 }
 
 #ju-learning-truth-1 {
-  height: 90vh;
+  height: 86vh;
   width: auto;
+  align-self: flex-end;
+  position: relative;
+  z-index: 1;
+}
+
+#textbox-learning-truth-2 {
+  position: absolute;
+  top: 57%;
+  left: 33%;
+  z-index: 2;
+}
+
+/* MD TELLING JU */
+
+#telling-ju-scene {
+  background-image: url(images/backgrounds/to-danhyanggok-2.png);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#md-telling-ju {
+  height: 76vh;
+  width: auto;
+}
+
+#textbox-telling-ju-1 {
+  align-self: center;
+  margin-left: 70px;
+  margin-bottom: 50px;
+}
+
+#ju-telling-ju {
+  height: 80vh;
+  width: auto;
+}
+
+/* PRACTICE */
+
+#practice-scene {
+  background-color: #f4f0e9;
+  background-image: url(images/backgrounds/white-concrete-wall.png);
 }
 
 .hide {

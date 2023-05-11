@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://use.typekit.net/qhb7xyx.css" />
   </head>
   <body>
-    <div class="screen" id="cp-learning-truth-scene">
+    <div class="screen" id="cp-learning-truth-scene-1">
       <img
-      class="hide"
+        class="hide"
         id="cp-learning-truth-1"
         src="images/characters/crown-prince/cp-learning-truth-1.png"
         alt=""
@@ -45,23 +45,43 @@
         </button>
       </div>
 
-      <img
-        id="cp-learning-truth-2"
-        src="images/characters/crown-prince/cp-learning-truth-2.png"
-        alt=""
-      />
+      <div id="cp-learning-truth-scene-2">
+        <img
+          id="cp-learning-truth-2"
+          src="images/characters/crown-prince/cp-learning-truth-2.png"
+          alt=""
+        />
 
-      <img
-        id="ice-stone-learning-truth"
-        src="images/elements/ice-stone.png"
-        alt=""
-      />
+        <img
+          id="ice-stone-learning-truth"
+          src="images/elements/ice-stone.png"
+          alt=""
+        />
 
-      <img
-        id="ju-learning-truth-1"
-        src="images/characters/jang-uk/ju-learning-truth-1.png"
-        alt=""
-      />
+        <img
+          id="ju-learning-truth-1"
+          src="images/characters/jang-uk/ju-learning-truth-1.png"
+          alt=""
+        />
+      </div>
+
+      <div class="textbox-large" id="textbox-learning-truth-2">
+        <p class="text" id="learning-truth-text-4">
+          The Crown Prince sends an official duel to Jang-Uk, a battle where one
+          could <strong> be killed </strong> and no bystanders could interfere.
+        </p>
+        <p class="text hide" id="learning-truth-text-5">
+          The prize, however, is an <strong> ice stone,</strong> one of the most
+          treasured items in the kingdom. Just exactly what Jang-Uk needs...
+        </p>
+
+        <button class="next-button-2" id="next-button-learning-truth-4">
+          NEXT >
+        </button>
+        <button class="next-button-2 hide" id="next-button-learning-truth-5">
+          <a href="telling-ju.html"> NEXT ></a>
+        </button>
+      </div>
     </div>
 
     <script
@@ -83,6 +103,12 @@
         $("#learning-truth-text-3").toggleClass("hide");
         $("#next-button-learning-truth-2").toggleClass("hide");
         $("#next-button-learning-truth-3").toggleClass("hide");
+      });
+      $("#next-button-learning-truth-4").click(function () {
+        $("#learning-truth-text-4").toggleClass("hide");
+        $("#learning-truth-text-5").toggleClass("hide");
+        $("#next-button-learning-truth-4").toggleClass("hide");
+        $("#next-button-learning-truth-5").toggleClass("hide");
       });
     </script>
   </body>
