@@ -84,7 +84,7 @@ p.text-long {
   line-height: 160%;
 
   text-align: center;
-  padding: 20px 5px 0 0px;
+  padding: 15px 0px 0 0px;
 }
 
 button {
@@ -657,6 +657,67 @@ body {
 #practice-scene {
   background-color: #f4f0e9;
   background-image: url(images/backgrounds/white-concrete-wall.png);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.progress {
+  border: 2px solid black;
+  border-radius: 50px;
+  width: 80%;
+  margin: auto;
+  padding: 6px;
+  position: relative;
+}
+
+.greenbar {
+  background: #75d852;
+  width: 20%;
+  height: 40px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+#progress-bar-text {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  margin: 0;
+  padding: 0;
+  transition: width 1000s;
+
+  font-family: "Arboria";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.145em;
+}
+
+#textbox-practice-1 {
+  margin-bottom: 100px;
+}
+
+#practice-text-1 {
+  text-align: center;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.ju-practice {
+  width: 97vw;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+
+  position: relative;
+  bottom: 10%;
+  margin: 100px 0 0 0;
+  border-bottom: 3px dashed black;
 }
 
 .hide {

@@ -1,19 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jang-Uk Practicing</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/qhb7xyx.css" />
-</head>
-<body>
+  </head>
+  <body>
     <div class="screen" id="practice-scene">
-        <div class="textbox-large" id="textbox-practice-1">
-            <p class="text" id="practice-text-1">So off he goes, Jang Uk practices days and nights to reach Ryusu.</p>
-            <button class="next-button-3" id="next-button-practcice-1">NEXT ></button>
+      <div class="progress">
+        <div class="greenbar"></div>
+        <p id="progress-bar-text">PROGRESS BAR</p>
+      </div>
+      <div class="textbox-long" id="textbox-practice-1">
+        <p class="text-long" id="practice-text-1">
+          <strong> Click </strong> Jang-Uk to make the progress bar move <br />
+          and have him practice.
+        </p>
+      </div>
+      <section class="ju-practice">
+        <div class="jang-uk">
+          <img
+            src="images/characters/jang-uk/Practice/practicing-1.png"
+            alt=""
+          />
         </div>
+        <div class="jang-uk invisible">
+          <img
+            src="images/characters/jang-uk/Practice/practicing-2.png"
+            alt=""
+          />
+        </div>
+        <div class="jang-uk invisible">
+          <img
+            src="images/characters/jang-uk/Practice/practicing-3.png"
+            alt=""
+          />
+        </div>
+        <div class="jang-uk invisible">
+          <img
+            src="images/characters/jang-uk/Practice/practicing-4.png"
+            alt=""
+          />
+        </div>
+        <div class="jang-uk invisible">
+          <img
+            src="images/characters/jang-uk/Practice/practicing-5.png"
+            alt=""
+          />
+        </div>
+        <div class="jang-uk invisible">
+          <img
+            src="images/characters/jang-uk/Practice/practicing-6.png"
+            alt=""
+          />
+        </div>
+        <div class="jang-uk invisible">
+          <img
+            src="images/characters/jang-uk/Practice/practicing-7.png"
+            alt=""
+          />
+        </div>
+        <div class="jang-uk invisible">
+          <img
+            src="images/characters/jang-uk/Practice/practicing-8.png"
+            alt=""
+          />
+        </div>
+        <div class="jang-uk invisible">
+          <img
+            src="images/characters/jang-uk/Practice/practicing-9.png"
+            alt=""
+          />
+        </div>
+      </section>
     </div>
-</body>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let jangUrl = "index.html";
+      $.fn.disableClick = function (disable) {
+        this.each(function () {
+          if (disable) {
+            if (this.onclick)
+              $(this).data("onclick", this.onclick).removeAttr("onclick");
+            if ($._data(this, "events") && $._data(this, "events").click)
+              $(this)
+                .data(
+                  "click",
+                  $.extend(true, {}, $._data(this, "events").click)
+                )
+                .off("click");
+          } else {
+            if ($(this).data("onclick")) this.onclick = $(this).data("onclick");
+            if ($(this).data("click"))
+              for (var i in $(this).data("click"))
+                $(this).on("click", $(this).data("click")[i].handler);
+          }
+        });
+        return this;
+      };
+
+      //disable clicks
+
+      let jangNum = 1;
+      let progress = 20;
+      $(".jang-uk").click(function () {
+        if (jangNum <= 8) {
+          jangNum++;
+          progress = progress + 10;
+          $(".greenbar")
+            .css("width", `${progress}%`)
+            .css("transition", "500ms");
+          if (jangNum - 1) {
+            $(this).addClass("invisible");
+            $(this).disableClick(true);
+          } //ending if
+          console.log(jangNum);
+          $(`.jang-uk:nth-child(${jangNum})`).removeClass("invisible");
+          $(`.jang-uk:nth-child(${jangNum})`).addClass("visible");
+        }
+        if (jangNum == 9) {
+          $(".greenbar").css("border-radius", `50px`);
+          setTimeout(() => {
+            window.location = jangUrl;
+          }, 2000);
+        }
+      });
+    </script>
+  </body>
 </html>
