@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find the Golden Fish</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/qhb7xyx.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <div class="screen" id="find-fish-scene">
+      <div
+        class="textbox-long animate__animated animate__tada"
+        id="textbox-find-fish-1"
+      >
+        <p class="text-long" id="find-fish-text-1">
+          Jang-Uk has reached <strong>Ryusu!</strong>
+        </p>
+        <button class="next-button-long" id="next-button-find-fish-1">
+          NEXT >
+        </button>
+      </div>
+
+      <div class="textbox-long hide" id="textbox-find-fish-2">
+        <p class="text-long" id="find-fish-text-2">
+          Jang-Uk now has to find the <strong> Golden Fish.</strong>
+        </p>
+
+        <p class="text-long hide" id="find-fish-text-3">
+          Hover to find the Golden Fish. The true Golden <br />
+          Fish will <strong> turn yellow </strong> once hovered!
+        </p>
+        <button class="next-button-long" id="next-button-find-fish-2">
+          NEXT >
+        </button>
+      </div>
+
+      <div class="school-of-fish hide">
+        <div class="fish-row">
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+        </div>
+        <div class="fish-row">
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+        </div>
+        <div class="fish-row">
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+        </div>
+        <div class="fish-row">
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+        </div>
+        <div class="fish-row">
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+          <img class="fish-img" src="images/elements/fish-normal.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("#next-button-find-fish-1").click(function () {
+        $("#textbox-find-fish-1").toggleClass("hide");
+        $("#textbox-find-fish-2").toggleClass("hide");
+        $(".school-of-fish").toggleClass("hide");
+      });
+
+      $("#next-button-find-fish-2").click(function () {
+        $("#find-fish-text-2").toggleClass("hide");
+        $("#find-fish-text-3").toggleClass("hide");
+        $("#next-button-find-fish-2").toggleClass("hide");
+      });
+    </script>
+  </body>
+</html>

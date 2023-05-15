@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fight Scene</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/qhb7xyx.css" />
+  </head>
+  <body>
+    <div class="screen" id="fight-scene">
+      <div class="fight-scenes-container">
+        <img id="fight-1" src="images/fight/fight-1.png" alt="" />
+        <img class="hide" id="fight-2" src="images/fight/fight-2.png" alt="" />
+        <img class="hide" id="fight-3" src="images/fight/fight-3.png" alt="" />
+        <img class="hide" id="fight-4" src="images/fight/fight-4.png" alt="" />
+        <img class="hide" id="fight-5" src="images/fight/fight-5.png" alt="" />
+      </div>
+      <div class="textbox-small" id="textbox-fight-scene">
+        <p class="text-small" id="fight-text-1">And the fight begins...</p>
+        <button class="next-button-small" id="next-button-fight-1">
+          NEXT >
+        </button>
+      </div>
+    </div>
+
+    <audio id="unsheath" src="audio/unsheath.mp3"></audio>
+    <audio id="charging" src="audio/charging.mp3"></audio>
+    <audio id="clash" src="audio/clash.mp3"></audio>
+    <audio id="clash-2" src="audio/clash.mp3"></audio>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      let unsheath = $("#unsheath")[0];
+      unsheath.volume = 1.0;
+
+      $("#next-button-fight-1").click(function () {
+        $("#fight-1").toggleClass("hide");
+        $("#fight-2").toggleClass("hide");
+        $("#textbox-fight-scene").toggleClass("hide");
+        unsheath.currentTime = 0;
+        unsheath.play();
+      });
+
+      let charge = $("#charging")[0];
+      charge.volume = 1.0;
+
+      $("#fight-2").click(function () {
+        $("#fight-2").toggleClass("hide");
+        $("#fight-3").toggleClass("hide");
+        charge.currentTime = 0;
+        charge.play();
+      });
+
+      let clash = $("#clash")[0];
+      clash.volume = 1.0;
+
+      $("#fight-3").click(function () {
+        $("#fight-3").toggleClass("hide");
+        $("#fight-4").toggleClass("hide");
+        clash.currentTime = 0;
+        clash.play();
+      });
+
+      let clash2 = $("#clash-2")[0];
+      clash2.volume = 1.0;
+      $("#fight-4").click(function () {
+        $("#fight-4").toggleClass("hide");
+        $("#fight-5").toggleClass("hide");
+        clash2.currentTime = 0;
+        clash2.play();
+      });
+    </script>
+  </body>
+</html>

@@ -145,7 +145,7 @@ button {
 
   width: 73px;
   align-self: flex-end;
-  margin-right: 40px;
+  margin-right: 34px;
   margin-top: -9px;
 }
 
@@ -160,7 +160,7 @@ button {
   width: 73px;
   align-self: flex-end;
   margin-right: 34px;
-  margin-top: -14px;
+  margin-top: -10px;
 }
 
 .next-button:hover,
@@ -718,6 +718,90 @@ body {
   bottom: 10%;
   margin: 100px 0 0 0;
   border-bottom: 3px dashed black;
+}
+
+/* FIND FISH SCENE */
+
+#find-fish-scene {
+  background-color: #f4f0e9;
+  background-image: url(images/backgrounds/white-concrete-wall.png);
+}
+
+#textbox-find-fish-1 {
+  position: absolute;
+  left: 35%;
+  top: 35%;
+}
+
+#textbox-find-fish-2 {
+  position: relative;
+  top: 3%;
+  left: 4%;
+  margin-bottom: 30px;
+}
+
+.fish-row {
+  width: 95vw;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 10px 0 10px;
+  margin: auto;
+}
+
+.fish-img {
+  width: 90%;
+  padding: 20px;
+}
+
+/* READY TO FIGHT SCENE */
+
+#ready-to-fight-scene {
+  background-image: url(images/backgrounds/daeho-2.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#textbox-ready-to-fight {
+  margin: 0 50px 0 0;
+}
+
+#ju-ready-to-fight {
+  height: 90vh;
+  width: auto;
+  align-self: flex-end;
+}
+
+/* FIGHT SCENE */
+
+#fight-scene {
+  background-color: #f4f0e9;
+  background-image: url(images/backgrounds/white-concrete-wall.png);
+}
+
+.fight-scenes-container {
+  width: 87vw;
+  height: 82vh;
+  border: 3px dashed black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.fight-scenes-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#textbox-fight-scene {
+  position: absolute;
+  bottom: 12%;
+  right: 8%;
+  z-index: 2;
 }
 
 .hide {
