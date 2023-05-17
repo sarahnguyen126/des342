@@ -26,23 +26,65 @@
           src="images/fight/fight-10.png"
           alt=""
         />
+        <img
+          class="hide"
+          id="fight-11"
+          src="images/fight/fight-11.png"
+          alt=""
+        />
+        <img
+          class="hide"
+          id="fight-12"
+          src="images/fight/fight-12.png"
+          alt=""
+        />
+        <img
+          class="hide"
+          id="fight-13"
+          src="images/fight/fight-13.png"
+          alt=""
+        />
       </div>
-      <div class="textbox-small" id="textbox-fight-scene">
+      <div class="textbox-small textbox-fight-scenes" id="textbox-fight">
         <p class="text-small" id="fight-text-1">And the fight begins...</p>
         <button class="next-button-small" id="next-button-fight-1">
           NEXT >
         </button>
       </div>
-      <div class="textbox-small hide" id="textbox-fight-scene-2">
+      <div class="textbox-small hide textbox-fight-scenes" id="textbox-fight-2">
         <p class="text-small" id="fight-text-2">A restless battle...</p>
         <button class="next-button-small" id="next-button-fight-2">
           NEXT >
         </button>
       </div>
-      <div class="textbox-small hide" id="textbox-fight-scene-3">
+      <div class="textbox-small hide textbox-fight-scenes" id="textbox-fight-3">
         <p class="text-small" id="fight-text-3">Now it’s time.</p>
         <button class="next-button-small" id="next-button-fight-3">
           NEXT >
+        </button>
+      </div>
+      <div class="textbox-small hide textbox-fight-scenes" id="textbox-fight-4">
+        <p class="text-small" id="fight-text-4">For Jang-Uk to...</p>
+        <button class="next-button-small" id="next-button-fight-4">
+          NEXT >
+        </button>
+      </div>
+      <div class="textbox-small hide textbox-fight-scenes" id="textbox-fight-5">
+        <p class="text-small" id="fight-text-5">...use his special skill.</p>
+        <button class="next-button-small" id="next-button-fight-5">
+          NEXT >
+        </button>
+      </div>
+      <div class="textbox-small hide textbox-fight-scenes" id="textbox-fight-6">
+        <p class="text-small" id="fight-text-6">It worked!</p>
+        <button class="next-button-small" id="next-button-fight-6">
+          NEXT >
+        </button>
+      </div>
+      <div class="textbox-long hide textbox-fight-scenes" id="textbox-fight-7">
+        <p class="text-long" id="fight-text-7">The Crown Prince is defeated.</p>
+        <button class="next-button-small" id="next-button-fight-7">
+          <a href="ending.html"> NEXT ></a>
         </button>
       </div>
     </div>
@@ -55,6 +97,8 @@
     <audio id="hard-clash-1" src="audio/clash-type-2.mp3"></audio>
     <audio id="hard-clash-2" src="audio/clash-type-2.mp3"></audio>
     <audio id="clash-slide" src="audio/sword-clash-slide.mp3"></audio>
+    <audio id="magic-spell" src="audio/magic-spell.mp3"></audio>
+    <audio id="thud" src="audio/thud.mp3"></audio>
 
     <script
       src="https://code.jquery.com/jquery-3.6.4.min.js"
@@ -69,7 +113,7 @@
       $("#next-button-fight-1").click(function () {
         $("#fight-1").toggleClass("hide");
         $("#fight-2").toggleClass("hide");
-        $("#textbox-fight-scene").toggleClass("hide");
+        $("#textbox-fight").toggleClass("hide");
         unsheath.currentTime = 0;
         unsheath.play();
       });
@@ -126,7 +170,7 @@
       $("#fight-7").click(function () {
         $("#fight-7").toggleClass("hide");
         $("#fight-8").toggleClass("hide");
-        $("#textbox-fight-scene-2").toggleClass("hide");
+        $("#textbox-fight-2").toggleClass("hide");
         hardClash2.currentTime = 0;
         hardClash2.play();
       });
@@ -136,10 +180,46 @@
       $("#next-button-fight-2").click(function () {
         $("#fight-8").toggleClass("hide");
         $("#fight-9").toggleClass("hide");
-        $("#textbox-fight-scene-2").toggleClass("hide");
-        $("#textbox-fight-scene-3").toggleClass("hide");
+        $("#textbox-fight-2").toggleClass("hide");
+        $("#textbox-fight-3").toggleClass("hide");
         clashSlide.currentTime = 0;
         clashSlide.play();
+      });
+
+      $("#next-button-fight-3").click(function () {
+        $("#fight-9").toggleClass("hide");
+        $("#fight-10").toggleClass("hide");
+        $("#textbox-fight-3").toggleClass("hide");
+        $("#textbox-fight-4").toggleClass("hide");
+      });
+
+      let magicSpell = $("#magic-spell")[0];
+      magicSpell.volume = 0.6;
+      $("#next-button-fight-4").click(function () {
+        $("#fight-10").toggleClass("hide");
+        $("#fight-11").toggleClass("hide");
+        $("#textbox-fight-4").toggleClass("hide");
+        $("#textbox-fight-5").toggleClass("hide");
+        magicSpell.currentTime = 0;
+        magicSpell.play();
+      });
+
+      let thud = $("#thud")[0];
+      thud.volume = 1.0;
+      $("#next-button-fight-5").click(function () {
+        $("#fight-11").toggleClass("hide");
+        $("#fight-12").toggleClass("hide");
+        $("#textbox-fight-5").toggleClass("hide");
+        $("#textbox-fight-6").toggleClass("hide");
+        thud.currentTime = 0;
+        thud.play();
+      });
+
+      $("#next-button-fight-6").click(function () {
+        $("#fight-12").toggleClass("hide");
+        $("#fight-13").toggleClass("hide");
+        $("#textbox-fight-6").toggleClass("hide");
+        $("#textbox-fight-7").toggleClass("hide");
       });
     </script>
   </body>

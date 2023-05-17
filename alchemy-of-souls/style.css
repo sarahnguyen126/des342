@@ -797,12 +797,60 @@ body {
   object-fit: cover;
 }
 
-#textbox-fight-scene,
-#textbox-fight-scene-2,
-#textbox-fight-scene-3 {
+.textbox-fight-scenes {
   position: absolute;
   bottom: 12%;
   right: 8%;
+  z-index: 2;
+}
+
+#textbox-fight-7 {
+  position: absolute;
+  top: 12%;
+  right: 7%;
+}
+
+#fight-text-7 {
+  text-align: left;
+  padding-left: 52px;
+}
+
+/* ENDING SCENE */
+
+#ending-scene {
+  background-image: url(images/backgrounds/daeho-2.png);
+}
+
+#cp-ending {
+  height: 92vh;
+  width: auto;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  z-index: 1;
+}
+
+#ice-stone-ending {
+  height: 22vh;
+  width: auto;
+  position: absolute;
+  top: 30%;
+  left: 47%;
+}
+
+#ju-ending {
+  height: 90vh;
+  width: auto;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  z-index: 1;
+}
+
+#textbox-ending {
+  position: absolute;
+  top: 54%;
+  left: 32%;
   z-index: 2;
 }
 
