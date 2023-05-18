@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finding Fish</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/qhb7xyx.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <div class="textbox-long" id="textbox-find-fish-2">
+      <p class="text-long" id="find-fish-text-2">
+        Jang-Uk now has to find the <strong> Golden Fish.</strong>
+      </p>
+
+      <p class="text-long hide" id="find-fish-text-3">
+        Hover to find the Golden Fish. The true Golden <br />
+        Fish will <strong> turn yellow </strong> once hovered!
+      </p>
+      <button class="next-button-long" id="next-button-find-fish-2">
+        NEXT >
+      </button>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".golden-fish-container").hover(
+          function () {
+            $("#normal-fish").hide();
+            $("#gold-fish").show();
+          },
+          function () {
+            $("#gold-fish").hide();
+            $("#normal-fish").show();
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

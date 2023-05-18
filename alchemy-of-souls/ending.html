@@ -15,13 +15,44 @@
         src="images/characters/crown-prince/cp-end.png"
         alt=""
       />
-      <img id="ice-stone-ending" src="images/elements/ice-stone.png" alt="">
-      <img id="ju-ending" src="images/characters/jang-uk/ju-ending.png" alt="">
+      <img id="ice-stone-ending" src="images/elements/ice-stone.png" alt="" />
+      <img
+        id="ju-ending"
+        src="images/characters/jang-uk/ju-ending.png"
+        alt=""
+      />
 
       <div class="textbox-large" id="textbox-ending">
-        <p class="text" id="ending-text-1">As promised, the Crown Prince awarded <br> Jang-Uk the Ice Stone, so he can finally save <br> his lover</p>
-        <button class="next-button-2"> NEXT ></button>
+        <p class="text" id="ending-text-1">
+          As promised, the Crown Prince awarded <br />
+          Jang-Uk the Ice Stone, so he can finally save <br />
+          his lover
+        </p>
+        <button class="next-button-2" id="next-button-ending-1">NEXT ></button>
       </div>
     </div>
+
+    <div class="screen hide" id="ending-scene-2">
+      <img id="hug-end" src="images/characters/together/hug-end.png" alt="" />
+      <div class="textbox-long" id="textbox-ending-2">
+        <p class="text-long" id="ending-text-2">
+          Jang-Uk gives the stone to his lover, and <br />
+          she continues to live.
+          <a href="index.html"> <strong> The End. </strong> </a>
+        </p>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("#next-button-ending-1").click(function () {
+        $("#ending-scene").toggleClass("hide");
+        $("#ending-scene-2").toggleClass("hide");
+      });
+    </script>
   </body>
 </html>

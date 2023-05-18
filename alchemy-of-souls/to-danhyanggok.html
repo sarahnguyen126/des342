@@ -103,10 +103,26 @@
       let opacityVal = 1.0;
       let sword = $("#sword")[0];
       sword.volume = 0.2;
-      $(".evil-spirit").click(function () {
+      $("#evil-spirit-1").click(function () {
         opacityVal = opacityVal - 0.1;
         $(this).css("opacity", `${opacityVal}`);
-        $(".evil-spirit").not(this).css("opacity", "1");
+        $("#evil-spirit-1").not(this).css("opacity", "1");
+        // audio stuff
+        sword.currentTime = 0;
+        sword.play();
+      });
+      $("#evil-spirit-2").click(function () {
+        opacityVal = opacityVal - 0.1;
+        $(this).css("opacity", `${opacityVal}`);
+        $("#evil-spirit-2").not(this).css("opacity", "1");
+        // audio stuff
+        sword.currentTime = 0;
+        sword.play();
+      });
+      $("#evil-spirit-3").click(function () {
+        opacityVal = opacityVal - 0.1;
+        $(this).css("opacity", `${opacityVal}`);
+        $("#evil-spirit-3").not(this).css("opacity", "1");
         // audio stuff
         sword.currentTime = 0;
         sword.play();

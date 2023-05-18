@@ -11,13 +11,12 @@
   <body>
     <div class="screen" id="cp-learning-truth-scene-1">
       <img
-        class="hide"
         id="cp-learning-truth-1"
         src="images/characters/crown-prince/cp-learning-truth-1.png"
         alt=""
       />
 
-      <div class="textbox-large hide" id="textbox-learning-truth-1">
+      <div class="textbox-large" id="textbox-learning-truth-1">
         <p class="text" id="learning-truth-text-1">
           Meanwhile back at Daeho, the Crown Prince learned a secret that Jang
           Uk was born on the day of the <strong> King's Star,</strong> and he
@@ -47,25 +46,28 @@
 
       <div id="cp-learning-truth-scene-2">
         <img
+          class="hide"
           id="cp-learning-truth-2"
           src="images/characters/crown-prince/cp-learning-truth-2.png"
           alt=""
         />
 
         <img
+          class="hide"
           id="ice-stone-learning-truth"
           src="images/elements/ice-stone.png"
           alt=""
         />
 
         <img
+          class="hide"
           id="ju-learning-truth-1"
           src="images/characters/jang-uk/ju-learning-truth-1.png"
           alt=""
         />
       </div>
 
-      <div class="textbox-large" id="textbox-learning-truth-2">
+      <div class="textbox-large hide" id="textbox-learning-truth-2">
         <p class="text" id="learning-truth-text-4">
           The Crown Prince sends an official duel to Jang-Uk, a battle where one
           could <strong> be killed </strong> and no bystanders could interfere.
@@ -104,6 +106,16 @@
         $("#next-button-learning-truth-2").toggleClass("hide");
         $("#next-button-learning-truth-3").toggleClass("hide");
       });
+
+      $("#next-button-learning-truth-3").click(function () {
+        $("#cp-learning-truth-1").toggleClass("hide");
+        $("#cp-learning-truth-2").toggleClass("hide");
+        $("#textbox-learning-truth-1").toggleClass("hide");
+        $("#textbox-learning-truth-2").toggleClass("hide");
+        $("#ice-stone-learning-truth").toggleClass("hide");
+        $("#ju-learning-truth-1").toggleClass("hide");
+      });
+
       $("#next-button-learning-truth-4").click(function () {
         $("#learning-truth-text-4").toggleClass("hide");
         $("#learning-truth-text-5").toggleClass("hide");
