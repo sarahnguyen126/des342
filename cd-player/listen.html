@@ -1,14 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Listen</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/abz0fzc.css" />
-</head>
-<body>
-    
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <main class="animate__animated animate__slideInDown">
+      <nav>
+        <svg class="nav-top-rect">
+          <rect
+            width="100%"
+            height="100%"
+            style="fill: rgba(201, 207, 229, 1)"
+          />
+        </svg>
+        <svg class="nav-bottom-rect">
+          <rect
+            width="100%"
+            height="100%"
+            style="fill: rgba(125, 140, 196, 1)"
+          />
+        </svg>
+        <div class="navbar-text-div">
+          <a class="nav-links home-link-hover" href="index.html">Home</a>
+          <a class="nav-links" id="current-listen-link" href="listen.html"
+            >Listen</a
+          >
+          <a class="nav-links products-link-hover" href="products.html"
+            >Products</a
+          >
+          <a class="nav-links why-link-hover" href="why.html">Why?</a>
+        </div>
+      </nav>
+      <div class="listen-overall-flexbox">
+        <div class="listen-first-half">
+          <img id="listen-cd-player" src="images/cd-player.png" alt="" />
+          <div class="current-song-container">
+            <p class="current-song-name">I Am</p>
+            <p class="current-by-line">BY IVE</p>
+            <p class="current-song-info">
+              ALBUM: <span class="ssp-heavy"> I’ve IVE </span><br />
+              GENRE: <span class="ssp-heavy"> POP </span><br />
+              Released on <span class="ssp-heavy"> April 10, 2023 </span>
+            </p>
+          </div>
+        </div>
+        <div class="listen-second-half">
+          <div class="modes-container">
+            <p>NORMAL MODE</p>
+            <p>CONCERT MODE</p>
+          </div>
+          <div class="cd-selection">
+            <div class="cd-container">
+              <img class="cds" src="images/cds/enhypen.png" alt="" />
+              <div class="cd-selection-text">
+                <p class="song-name">Bite Me</p>
+                <p class="artist-name">ENHYPEN</p>
+              </div>
+            </div>
+            <div class="cd-container">
+              <img class="cds" src="images/cds/gidle.png" alt="" />
+              <div class="cd-selection-text">
+                <p class="song-name">Queencard</p>
+                <p class="artist-name">(G)I-DLE</p>
+              </div>
+            </div>
+            <div class="cd-container">
+              <img class="cds" src="images/cds/verivery.png" alt="" />
+              <div class="cd-selection-text">
+                <p class="song-name">Crazy Like That</p>
+                <p class="artist-name">VERIVERY</p>
+              </div>
+            </div>
+            <div class="cd-container">
+              <img class="cds" src="images/cds/aespa.png" alt="" />
+              <div class="cd-selection-text">
+                <p class="song-name">Spicy</p>
+                <p class="artist-name">AESPA</p>
+              </div>
+            </div>
+            <div class="cd-container">
+              <img class="cds" src="images/cds/xikers.png" alt="" />
+              <div class="cd-selection-text">
+                <p class="song-name">Rockstar</p>
+                <p class="artist-name">XIKERS</p>
+              </div>
+            </div>
+            <div class="cd-container">
+              <img class="cds" src="images/cds/le-sserafim.png" alt="" />
+              <div class="cd-selection-text">
+                <p class="song-name">Unforgiven</p>
+                <p class="artist-name">LE SSERAFIM</p>
+              </div>
+            </div>
+            <div class="cd-container">
+              <img class="cds" src="images/cds/dojaejung.png" alt="" />
+              <div class="cd-selection-text">
+                <p class="song-name">Perfume</p>
+                <p class="artist-name">DOJAEJUNG</p>
+              </div>
+            </div>
+            <div class="cd-container">
+              <img class="cds" src="images/cds/jisoo.png" alt="" />
+              <div class="cd-selection-text">
+                <p class="song-name">Flower</p>
+                <p class="artist-name">JISOO</p>
+              </div>
+            </div>
+            <div class="cd-container">
+              <img class="cds" src="images/cds/seventeen.png" alt="" />
+              <div class="cd-selection-text">
+                <p class="song-name">Super</p>
+                <p class="artist-name">SEVENTEEN</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
