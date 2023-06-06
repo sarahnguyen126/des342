@@ -317,3 +317,42 @@ body {
   letter-spacing: 0.04em;
   margin: 0;
 }
+
+/* PRODUCTS PAGE */
+
+.products-overall-flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h2 {
+  font-family: essonnes-display, serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 46px;
+  color: #ff7b9c;
+}
+
+#filter {
+  font-family: sweet-sans-pro, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+}
+
+.products-side-bar li {
+  list-style: none;
+  font-family: sweet-sans-pro, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.product-container {
+  height: 262px;
+  width: 210px;
+}
+
+.product-img {
+  width: 100%;
+}
