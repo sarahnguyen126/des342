@@ -1,3 +1,12 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 h1 {
   font-family: sweet-sans-pro, sans-serif;
   font-weight: 900;
@@ -115,6 +124,16 @@ body {
   z-index: 1;
 }
 
+#blue-inside:hover,
+#pink-inside:hover,
+#yellow-inside:hover {
+  animation-name: rotate;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 120px 120px;
+}
+
 #main-listen-button {
   position: relative;
   top: 380px;
@@ -141,35 +160,40 @@ body {
 .listen-overall-flexbox {
   display: flex;
   justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 0;
 }
 
 .listen-first-half {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  width: 50vw;
+  width: 43vw;
 }
 
 #listen-cd-player {
-  height: 80vh;
+  height: 84vh;
   position: relative;
+  top: 20px;
+  left: 80px;
   z-index: 1;
 }
 
 .current-song-container {
   position: relative;
+  right: 50px;
   z-index: 2;
   display: block;
 
   border-bottom: 1px solid black;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 }
 
 .current-song-name {
   font-family: essonnes-display, serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 35px;
+  font-size: 34px;
 
   margin: 0;
 }
@@ -188,7 +212,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 27px;
+  line-height: 26px;
 
   margin: 25px 0 16px 0;
 }
@@ -199,7 +223,7 @@ body {
 
 .listen-second-half {
   width: 46vw;
-  padding-left: 10px;
+  padding-left: 30px;
   margin-top: 40px;
 }
 
@@ -214,13 +238,19 @@ body {
   font-family: sweet-sans-pro, sans-serif;
   font-style: normal;
   font-weight: 400;
+  font-size: 14px;
+}
+
+.mode-blue {
+  color: #7d8cc4;
+  font-weight: 500;
 }
 
 .cd-selection {
   display: flex;
   flex-wrap: wrap;
   height: 68vh;
-  padding-top: 20px;
+  padding-top: 25px;
   overflow-y: scroll;
 }
 
@@ -233,6 +263,14 @@ body {
   width: 100%;
   position: relative;
   z-index: 1;
+  display: inline-block;
+}
+
+.cds:hover {
+  animation-name: rotate;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .cd-selection-text {
