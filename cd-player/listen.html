@@ -7,42 +7,30 @@
     <title>Listen</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/abz0fzc.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   </head>
   <body>
     <main class="animate__animated animate__slideInDown">
       <nav>
         <svg class="nav-top-rect">
-          <rect
-            width="100%"
-            height="100%"
-            style="fill: rgba(201, 207, 229, 1)"
-          />
+          <rect width="100%" height="100%" style="fill: rgba(201, 207, 229, 1)" />
         </svg>
         <svg class="nav-bottom-rect">
-          <rect
-            width="100%"
-            height="100%"
-            style="fill: rgba(125, 140, 196, 1)"
-          />
+          <rect width="100%" height="100%" style="fill: rgba(125, 140, 196, 1)" />
         </svg>
         <div class="navbar-text-div">
           <a class="nav-links home-link-hover" href="index.html">Home</a>
-          <a class="nav-links" id="current-listen-link" href="listen.html"
-            >Listen</a
-          >
-          <a class="nav-links products-link-hover" href="products.html"
-            >Products</a
-          >
+          <a class="nav-links" id="current-listen-link" href="listen.html">Listen</a>
+          <a class="nav-links products-link-hover" href="products.html">Products</a>
           <a class="nav-links why-link-hover" href="why.html">Why?</a>
         </div>
       </nav>
       <div class="listen-overall-flexbox">
         <div class="listen-first-half">
           <img id="listen-cd-player" src="images/cd-player.png" alt="" />
+          <div id="current-cd">
+            <img src="images/cds/enhypen.png" alt="" />
+          </div>
           <div class="current-song-container">
             <p class="current-song-name">I Am</p>
             <p class="current-by-line">BY IVE</p>
@@ -53,23 +41,9 @@
             </p>
           </div>
         </div>
-        <svg
-          width="14"
-          height="551"
-          viewBox="0 0 14 551"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1.00004 0.5L1.00004 550.5"
-            stroke="#ADADAD"
-            stroke-width="2"
-          />
-          <path
-            d="M12.2102 0.5L12.2102 550.5"
-            stroke="#ADADAD"
-            stroke-width="2"
-          />
+        <svg width="14" height="551" viewBox="0 0 14 551" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.00004 0.5L1.00004 550.5" stroke="#ADADAD" stroke-width="2" />
+          <path d="M12.2102 0.5L12.2102 550.5" stroke="#ADADAD" stroke-width="2" />
         </svg>
 
         <div class="listen-second-half">
@@ -79,21 +53,21 @@
           </div>
           <div class="cd-selection">
             <div class="cd-container">
-              <img class="cds" src="images/cds/enhypen.png" alt="" />
+              <img class="cds" id="enhypen" src="images/cds/enhypen.png" alt="" />
               <div class="cd-selection-text">
                 <p class="song-name">Bite Me</p>
                 <p class="artist-name">ENHYPEN</p>
               </div>
             </div>
             <div class="cd-container">
-              <img class="cds" src="images/cds/gidle.png" alt="" />
+              <img class="cds" id="gidle" src="images/cds/gidle.png" alt="" />
               <div class="cd-selection-text">
                 <p class="song-name">Queencard</p>
                 <p class="artist-name">(G)I-DLE</p>
               </div>
             </div>
             <div class="cd-container">
-              <img class="cds" src="images/cds/verivery.png" alt="" />
+              <img class="cds" id="verivery" src="images/cds/verivery.png" alt="" />
               <div class="cd-selection-text">
                 <p class="song-name">Crazy Like That</p>
                 <p class="artist-name">VERIVERY</p>
@@ -166,5 +140,29 @@
         </div>
       </div>
     </main>
+    <audio preload="auto" id="verivery-song">
+	    <source src="audio/shinssong.mp3"></source>
+    </audio>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script>
+      let veriverySong = $("#verivery-song")[0];
+      $('#verivery').click(function () {
+        veriverySong.play();
+        $('#current-cd img').attr('src', 'images/cds/verivery.png');
+      
+      })
+
+
+    //    var veriverySong = $("#verivery-song")[0];
+    
+    // $("#verivery-button").click(function() {
+    //   if ($('audio#verivery-song')[0].paused == false ){
+    //     veriverySong.pause();
+    //   } else {
+    //     veriverySong.play();
+    //   }
+    // });
+    </script>
   </body>
 </html>

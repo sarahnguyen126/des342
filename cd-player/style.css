@@ -69,7 +69,24 @@ body {
 .listen-link-hover:hover {
   color: #7d8cc4;
 }
+/* alanna's junk */
+.listen-first-half {
+  position: relative;
+}
+#listen-cd-player {
+  z-index: 0;
+}
 
+#current-cd {
+  position: absolute;
+  top: 50px;
+  left: 130px;
+  z-index: 9;
+}
+#current-cd img {
+  width: 300px;
+  display: inline-block;
+}
 .products-link-hover:hover {
   color: #ff7b9c;
 }
@@ -108,7 +125,7 @@ body {
 }
 
 .buttons-on-main {
-  font-family: "Essonnes";
+  font-family: 'Essonnes';
   font-style: italic;
   font-weight: 400;
   font-size: 30px;
