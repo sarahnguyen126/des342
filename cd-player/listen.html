@@ -148,21 +148,16 @@
     <script>
       let veriverySong = $("#verivery-song")[0];
       $('#verivery').click(function () {
-        veriverySong.play();
+          if (veriverySong.paused == false ){
+              veriverySong.pause();
+            } else {
+              veriverySong.play();
+            }
+          
         $('#current-cd img').attr('src', 'images/cds/verivery.png');
-      
-      })
+      });
 
-
-    //    var veriverySong = $("#verivery-song")[0];
     
-    // $("#verivery-button").click(function() {
-    //   if ($('audio#verivery-song')[0].paused == false ){
-    //     veriverySong.pause();
-    //   } else {
-    //     veriverySong.play();
-    //   }
-    // });
     </script>
   </body>
 </html>
