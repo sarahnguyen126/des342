@@ -148,15 +148,21 @@
     <script>
       let veriverySong = $("#verivery-song")[0];
       $('#verivery').click(function () {
-          if (veriverySong.paused == false ){
-              veriverySong.pause();
-            } else {
-              veriverySong.play();
-            }
+        veriverySong.currentTime = 0;
+        veriverySong.play();
           
         $('#current-cd img').attr('src', 'images/cds/verivery.png');
       });
 
+      // $('#play-pause-btn').click(function(){
+      //   if (veriverySong.paused == false ){
+      //         veriverySong.pause();
+      //         $('#play-pause-btn').attr('src', 'images/play.btn')
+      //       } else {
+      //         veriverySong.play();
+      //         $('#play-pause-btn').attr('src', 'images/pause.btn')
+      //       }    
+      // })
     
     </script>
   </body>
