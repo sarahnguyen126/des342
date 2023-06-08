@@ -99,7 +99,10 @@
             <div class="cd-container">
               <img class="cds" id="gidle" src="images/cds/gidle.png" alt="" />
               <div class="cd-selection-text">
-                <p class="song-name">Queencard</p>
+                <div class="btn-flex-container" id="gidle-play-pause">
+                  <img src="images/svg/buttons/gidle-play.svg" alt="" />
+                  <p class="song-name">Queencard</p>
+                </div>
                 <p class="artist-name">(G)I-DLE</p>
               </div>
             </div>
@@ -120,23 +123,33 @@
               </div>
             </div>
             <div class="cd-container">
-              <img class="cds" src="images/cds/aespa.png" alt="" />
+              <img class="cds" id="aespa" src="images/cds/aespa.png" alt="" />
               <div class="cd-selection-text">
-                <p class="song-name">Spicy</p>
+                <div class="btn-flex-container" id="aespa-play-pause">
+                  <img src="images/svg/buttons/aespa-play.svg" alt="" />
+                  <p class="song-name">Spicy</p>
+                </div>
                 <p class="artist-name">AESPA</p>
               </div>
             </div>
             <div class="cd-container">
-              <img class="cds" src="images/cds/boynextdoor.png" alt="" />
+              <img class="cds" id="bnd" src="images/cds/bnd.png" alt="" />
               <div class="cd-selection-text">
-                <p class="song-name">One and Only</p>
+                <div class="btn-flex-container" id="bnd-play-pause">
+                  <img src="images/svg/buttons/bnd-play.svg" alt="" />
+                  <p class="song-name">One and Only</p>
+                </div>
                 <p class="artist-name">BOYNEXTDOOR</p>
               </div>
             </div>
             <div class="cd-container">
-              <img class="cds" src="images/cds/le-sserafim.png" alt="" />
+              <img class="cds" id="ls" src="images/cds/ls.png" alt="" />
               <div class="cd-selection-text">
-                <p class="song-name">Unforgiven</p>
+                <div class="btn-flex-container" id="ls-play-pause">
+                  <img src="images/svg/buttons/ls-play.svg" alt="" />
+                  <p class="song-name">Unforgiven</p>
+                </div>
+
                 <p class="artist-name">LE SSERAFIM</p>
               </div>
             </div>
@@ -188,7 +201,10 @@
     </main>
     <audio id="enhypen-song" src="audio/enhypen.mp3"></audio>
     <audio id="gidle-song" src="audio/gidle.mp3"></audio>
-    <audio preload="auto" id="verivery-song" src="audio/verivery.mp3"></audio>
+    <audio id="verivery-song" src="audio/verivery.mp3"></audio>
+    <audio id="aespa-song" src="audio/aespa.mp3"></audio>
+    <audio id="bnd-song" src="audio/bnd.mp3"></audio>
+    <audio id="ls-song" src="audio/ls.mp3"></audio>
 
     <script
       src="https://code.jquery.com/jquery-3.7.0.min.js"
@@ -233,6 +249,30 @@
         gidleSong.play();
 
         $("#current-cd img").attr("src", "images/cds/gidle.png");
+        $("#current-cd img").toggleClass("rotate");
+        $("#gidle-play-pause img").attr(
+          "src",
+          "images/svg/buttons/gidle-pause.svg"
+        );
+      });
+
+      $("#gidle-play-pause").click(function () {
+        if (gidleSong.paused == false) {
+          gidleSong.pause();
+          $("#gidle-play-pause img").attr(
+            "src",
+            "images/svg/buttons/gidle-play.svg"
+          );
+          $("#current-cd img").toggleClass("rotate");
+        } else {
+          gidleSong.play();
+          $("#gidle-play-pause img").attr(
+            "src",
+            "images/svg/buttons/gidle-pause.svg"
+          );
+          $("#current-cd img").attr("src", "images/cds/gidle.png");
+          $("#current-cd img").toggleClass("rotate");
+        }
       });
 
       let veriverySong = $("#verivery-song")[0];
@@ -263,6 +303,96 @@
             "images/svg/buttons/verivery-pause.svg"
           );
           $("#current-cd img").attr("src", "images/cds/verivery.png");
+          $("#current-cd img").toggleClass("rotate");
+        }
+      });
+
+      let aespaSong = $("#aespa-song")[0];
+      $("#aespa").click(function () {
+        aespaSong.currentTime = 0;
+        aespaSong.play();
+
+        $("#current-cd img").attr("src", "images/cds/aespa.png");
+        $("#current-cd img").toggleClass("rotate");
+        $("#aespa-play-pause img").attr(
+          "src",
+          "images/svg/buttons/aespa-pause.svg"
+        );
+      });
+
+      $("#aespa-play-pause").click(function () {
+        if (aespaSong.paused == false) {
+          aespaSong.pause();
+          $("#aespa-play-pause img").attr(
+            "src",
+            "images/svg/buttons/aespa-play.svg"
+          );
+          $("#current-cd img").toggleClass("rotate");
+        } else {
+          aespaSong.play();
+          $("#aespa-play-pause img").attr(
+            "src",
+            "images/svg/buttons/aespa-pause.svg"
+          );
+          $("#current-cd img").attr("src", "images/cds/aespa.png");
+          $("#current-cd img").toggleClass("rotate");
+        }
+      });
+
+      let bndSong = $("#bnd-song")[0];
+      $("#bnd").click(function () {
+        bndSong.currentTime = 0;
+        bndSong.play();
+
+        $("#current-cd img").attr("src", "images/cds/bnd.png");
+        $("#current-cd img").toggleClass("rotate");
+        $("#bnd-play-pause img").attr(
+          "src",
+          "images/svg/buttons/bnd-pause.svg"
+        );
+      });
+
+      $("#bnd-play-pause").click(function () {
+        if (bndSong.paused == false) {
+          bndSong.pause();
+          $("#bnd-play-pause img").attr(
+            "src",
+            "images/svg/buttons/bnd-play.svg"
+          );
+          $("#current-cd img").toggleClass("rotate");
+        } else {
+          bndSong.play();
+          $("#bnd-play-pause img").attr(
+            "src",
+            "images/svg/buttons/bnd-pause.svg"
+          );
+          $("#current-cd img").attr("src", "images/cds/bnd.png");
+          $("#current-cd img").toggleClass("rotate");
+        }
+      });
+
+      let lsSong = $("#ls-song")[0];
+      $("#ls").click(function () {
+        lsSong.currentTime = 0;
+        lsSong.play();
+
+        $("#current-cd img").attr("src", "images/cds/ls.png");
+        $("#current-cd img").toggleClass("rotate");
+        $("#ls-play-pause img").attr("src", "images/svg/buttons/ls-pause.svg");
+      });
+
+      $("#ls-play-pause").click(function () {
+        if (lsSong.paused == false) {
+          lsSong.pause();
+          $("#ls-play-pause img").attr("src", "images/svg/buttons/ls-play.svg");
+          $("#current-cd img").toggleClass("rotate");
+        } else {
+          lsSong.play();
+          $("#ls-play-pause img").attr(
+            "src",
+            "images/svg/buttons/ls-pause.svg"
+          );
+          $("#current-cd img").attr("src", "images/cds/ls.png");
           $("#current-cd img").toggleClass("rotate");
         }
       });
