@@ -7,6 +7,10 @@
   }
 }
 
+.rotate {
+  animation: rotate 3s infinite linear;
+}
+
 h1 {
   font-family: sweet-sans-pro, sans-serif;
   font-weight: 900;
@@ -294,6 +298,16 @@ body {
   position: relative;
   top: -15px;
   z-index: 2;
+}
+
+.btn-flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+#verivery-play-pause img,
+#enhypen-play-pause img {
+padding-right: 8px;
 }
 
 .song-name {

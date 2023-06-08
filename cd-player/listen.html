@@ -7,21 +7,36 @@
     <title>Listen</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/abz0fzc.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <main class="animate__animated animate__slideInDown">
       <nav>
         <svg class="nav-top-rect">
-          <rect width="100%" height="100%" style="fill: rgba(201, 207, 229, 1)" />
+          <rect
+            width="100%"
+            height="100%"
+            style="fill: rgba(201, 207, 229, 1)"
+          />
         </svg>
         <svg class="nav-bottom-rect">
-          <rect width="100%" height="100%" style="fill: rgba(125, 140, 196, 1)" />
+          <rect
+            width="100%"
+            height="100%"
+            style="fill: rgba(125, 140, 196, 1)"
+          />
         </svg>
         <div class="navbar-text-div">
           <a class="nav-links home-link-hover" href="index.html">Home</a>
-          <a class="nav-links" id="current-listen-link" href="listen.html">Listen</a>
-          <a class="nav-links products-link-hover" href="products.html">Products</a>
+          <a class="nav-links" id="current-listen-link" href="listen.html"
+            >Listen</a
+          >
+          <a class="nav-links products-link-hover" href="products.html"
+            >Products</a
+          >
           <a class="nav-links why-link-hover" href="why.html">Why?</a>
         </div>
       </nav>
@@ -41,9 +56,23 @@
             </p>
           </div>
         </div>
-        <svg width="14" height="551" viewBox="0 0 14 551" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1.00004 0.5L1.00004 550.5" stroke="#ADADAD" stroke-width="2" />
-          <path d="M12.2102 0.5L12.2102 550.5" stroke="#ADADAD" stroke-width="2" />
+        <svg
+          width="14"
+          height="551"
+          viewBox="0 0 14 551"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.00004 0.5L1.00004 550.5"
+            stroke="#ADADAD"
+            stroke-width="2"
+          />
+          <path
+            d="M12.2102 0.5L12.2102 550.5"
+            stroke="#ADADAD"
+            stroke-width="2"
+          />
         </svg>
 
         <div class="listen-second-half">
@@ -53,9 +82,17 @@
           </div>
           <div class="cd-selection">
             <div class="cd-container">
-              <img class="cds" id="enhypen" src="images/cds/enhypen.png" alt="" />
+              <img
+                class="cds"
+                id="enhypen"
+                src="images/cds/enhypen.png"
+                alt=""
+              />
               <div class="cd-selection-text">
-                <p class="song-name">Bite Me</p>
+                <div class="btn-flex-container" id="enhypen-play-pause">
+                  <img src="images/svg/buttons/enhypen-play.svg" alt="" />
+                  <p class="song-name">Bite Me</p>
+                </div>
                 <p class="artist-name">ENHYPEN</p>
               </div>
             </div>
@@ -67,9 +104,18 @@
               </div>
             </div>
             <div class="cd-container">
-              <img class="cds" id="verivery" src="images/cds/verivery.png" alt="" />
+              <img
+                class="cds"
+                id="verivery"
+                src="images/cds/verivery.png"
+                alt=""
+              />
               <div class="cd-selection-text">
-                <p class="song-name">Crazy Like That</p>
+                <div class="btn-flex-container" id="verivery-play-pause">
+                  <img src="images/svg/buttons/verivery-play.svg" alt="" />
+                  <p class="song-name">Crazy Like That</p>
+                </div>
+
                 <p class="artist-name">VERIVERY</p>
               </div>
             </div>
@@ -140,30 +186,86 @@
         </div>
       </div>
     </main>
-    <audio preload="auto" id="verivery-song">
-	    <source src="audio/shinssong.mp3"></source>
-    </audio>
+    <audio id="enhypen-song" src="audio/enhypen.mp3"></audio>
+    <audio id="gidle-song" src="audio/gidle.mp3"></audio>
+    <audio preload="auto" id="verivery-song" src="audio/verivery.mp3"></audio>
 
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
     <script>
-      let veriverySong = $("#verivery-song")[0];
-      $('#verivery').click(function () {
-        veriverySong.currentTime = 0;
-        veriverySong.play();
-          
-        $('#current-cd img').attr('src', 'images/cds/verivery.png');
+      let enhypenSong = $("#enhypen-song")[0];
+      $("#enhypen").click(function () {
+        enhypenSong.currentTime = 0;
+        enhypenSong.play();
+
+        $("#current-cd img").attr("src", "images/cds/enhypen.png");
+        $("#current-cd img").toggleClass("rotate");
+        $("#enhypen-play-pause img").attr(
+          "src",
+          "images/svg/buttons/enhypen-pause.svg"
+        );
+      });
+      $("#enhypen-play-pause").click(function () {
+        if (enhypenSong.paused == false) {
+          enhypenSong.pause();
+          $("#enhypen-play-pause img").attr(
+            "src",
+            "images/svg/buttons/enhypen-play.svg"
+          );
+          $("#current-cd img").toggleClass("rotate");
+        } else {
+          enhypenSong.play();
+          $("#enhypen-play-pause img").attr(
+            "src",
+            "images/svg/buttons/enhypen-pause.svg"
+          );
+          $("#current-cd img").attr("src", "images/cds/enhypen.png");
+          $("#current-cd img").toggleClass("rotate");
+        }
       });
 
-      // $('#play-pause-btn').click(function(){
-      //   if (veriverySong.paused == false ){
-      //         veriverySong.pause();
-      //         $('#play-pause-btn').attr('src', 'images/play.btn')
-      //       } else {
-      //         veriverySong.play();
-      //         $('#play-pause-btn').attr('src', 'images/pause.btn')
-      //       }    
-      // })
-    
+      let gidleSong = $("#gidle-song")[0];
+      $("#gidle").click(function () {
+        gidleSong.currentTime = 0;
+        gidleSong.play();
+
+        $("#current-cd img").attr("src", "images/cds/gidle.png");
+      });
+
+      let veriverySong = $("#verivery-song")[0];
+      $("#verivery").click(function () {
+        veriverySong.currentTime = 0;
+        veriverySong.play();
+
+        $("#current-cd img").attr("src", "images/cds/verivery.png");
+        $("#current-cd img").toggleClass("rotate");
+        $("#verivery-play-pause img").attr(
+          "src",
+          "images/svg/buttons/verivery-pause.svg"
+        );
+      });
+
+      $("#verivery-play-pause").click(function () {
+        if (veriverySong.paused == false) {
+          veriverySong.pause();
+          $("#verivery-play-pause img").attr(
+            "src",
+            "images/svg/buttons/verivery-play.svg"
+          );
+          $("#current-cd img").toggleClass("rotate");
+        } else {
+          veriverySong.play();
+          $("#verivery-play-pause img").attr(
+            "src",
+            "images/svg/buttons/verivery-pause.svg"
+          );
+          $("#current-cd img").attr("src", "images/cds/verivery.png");
+          $("#current-cd img").toggleClass("rotate");
+        }
+      });
     </script>
   </body>
 </html>
