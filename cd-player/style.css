@@ -362,6 +362,10 @@ h2 {
   font-size: 14px;
 }
 
+.pink-divider {
+  align-self: flex-end;
+}
+
 .products-selection {
   width: 65vw;
   height: 78vh;
