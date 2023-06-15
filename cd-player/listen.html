@@ -46,14 +46,64 @@
           <div id="current-cd">
             <img src="images/cds/enhypen.png" alt="" />
           </div>
-          <div class="current-song-container">
-            <p class="current-song-name">Bite Me</p>
-            <p class="current-by-line">BY ENHYPEN</p>
-            <p class="current-song-info">
-              ALBUM: <span class="ssp-heavy"> Dark Blood - EP </span><br />
-              GENRE: <span class="ssp-heavy"> K-POP </span><br />
-              Released on <span class="ssp-heavy"> May 22, 2023 </span>
-            </p>
+          <div class="overall-current-song-box">
+            <div class="current-song-container" id="current-song-enhypen">
+              <p class="current-song-name">Bite Me</p>
+              <p class="current-by-line">BY ENHYPEN</p>
+              <p class="current-song-info">
+                ALBUM: <span class="ssp-heavy"> Dark Blood - EP </span><br />
+                GENRE: <span class="ssp-heavy"> K-POP </span><br />
+                Released on <span class="ssp-heavy"> May 22, 2023 </span>
+              </p>
+            </div>
+            <div class="current-song-container hide" id="current-song-gidle">
+              <p class="current-song-name">Queencard</p>
+              <p class="current-by-line">BY (G)I-DLE</p>
+              <p class="current-song-info">
+                ALBUM: <span class="ssp-heavy"> I Feel - EP </span><br />
+                GENRE: <span class="ssp-heavy"> K-POP </span><br />
+                Released on <span class="ssp-heavy"> May 15, 2023 </span>
+              </p>
+            </div>
+            <div class="current-song-container hide" id="current-song-verivery">
+              <p class="current-song-name-medium">Crazy Like That</p>
+              <p class="current-by-line">BY VERIVERY</p>
+              <p class="current-song-info">
+                ALBUM: <span class="ssp-heavy"> Liminality - EP.DREAM </span
+                ><br />
+                GENRE: <span class="ssp-heavy"> K-POP </span><br />
+                Released on <span class="ssp-heavy"> May 16, 2023 </span>
+              </p>
+            </div>
+            <div class="current-song-container hide" id="current-song-aespa">
+              <p class="current-song-name">Spicy</p>
+              <p class="current-by-line">BY AESPA</p>
+              <p class="current-song-info">
+                ALBUM:
+                <span class="ssp-heavy"> My World - The 3rd Mini Album </span
+                ><br />
+                GENRE: <span class="ssp-heavy"> K-POP </span><br />
+                Released on <span class="ssp-heavy"> May 2, 2023 </span>
+              </p>
+            </div>
+            <div class="current-song-container hide" id="current-song-bnd">
+              <p class="current-song-name">One and Only</p>
+              <p class="current-by-line">BY BOYNEXTDOOR</p>
+              <p class="current-song-info">
+                ALBUM: <span class="ssp-heavy"> WHO! - Single </span><br />
+                GENRE: <span class="ssp-heavy"> K-POP </span><br />
+                Released on <span class="ssp-heavy"> May 30, 2023 </span>
+              </p>
+            </div>
+            <div class="current-song-container hide" id="current-song-ls">
+              <p class="current-song-name">Unforgiven</p>
+              <p class="current-by-line">BY LE SSERAFIM</p>
+              <p class="current-song-info">
+                ALBUM: <span class="ssp-heavy"> UNFORGIVEN - EP </span><br />
+                GENRE: <span class="ssp-heavy"> K-POP </span><br />
+                Released on <span class="ssp-heavy"> May 1, 2023 </span>
+              </p>
+            </div>
           </div>
         </div>
         <svg
@@ -223,6 +273,13 @@
           "src",
           "images/svg/buttons/enhypen-pause.svg"
         );
+
+        $("#current-song-enhypen").css("display", "block");
+        $("#current-song-gidle").css("display", "none");
+        $("#current-song-verivery").css("display", "none");
+        $("#current-song-aespa").css("display", "none");
+        $("#current-song-bnd").css("display", "none");
+        $("#current-song-ls").css("display", "none");
       });
       $("#enhypen-play-pause").click(function () {
         if (enhypenSong.paused == false) {
@@ -240,6 +297,12 @@
           );
           $("#current-cd img").attr("src", "images/cds/enhypen.png");
           $("#current-cd img").toggleClass("rotate");
+          $("#current-song-enhypen").css("display", "block");
+          $("#current-song-gidle").css("display", "none");
+          $("#current-song-verivery").css("display", "none");
+          $("#current-song-aespa").css("display", "none");
+          $("#current-song-bnd").css("display", "none");
+          $("#current-song-ls").css("display", "none");
         }
       });
 
@@ -254,6 +317,13 @@
           "src",
           "images/svg/buttons/gidle-pause.svg"
         );
+
+        $("#current-song-gidle").css("display", "block");
+        $("#current-song-enhypen").css("display", "none");
+        $("#current-song-verivery").css("display", "none");
+        $("#current-song-aespa").css("display", "none");
+        $("#current-song-bnd").css("display", "none");
+        $("#current-song-ls").css("display", "none");
       });
 
       $("#gidle-play-pause").click(function () {
@@ -272,6 +342,13 @@
           );
           $("#current-cd img").attr("src", "images/cds/gidle.png");
           $("#current-cd img").toggleClass("rotate");
+
+          $("#current-song-gidle").css("display", "block");
+          $("#current-song-enhypen").css("display", "none");
+          $("#current-song-verivery").css("display", "none");
+          $("#current-song-aespa").css("display", "none");
+          $("#current-song-bnd").css("display", "none");
+          $("#current-song-ls").css("display", "none");
         }
       });
 
@@ -286,6 +363,12 @@
           "src",
           "images/svg/buttons/verivery-pause.svg"
         );
+        $("#current-song-verivery").css("display", "block");
+        $("#current-song-enhypen").css("display", "none");
+        $("#current-song-gidle").css("display", "none");
+        $("#current-song-aespa").css("display", "none");
+        $("#current-song-bnd").css("display", "none");
+        $("#current-song-ls").css("display", "none");
       });
 
       $("#verivery-play-pause").click(function () {
@@ -304,6 +387,13 @@
           );
           $("#current-cd img").attr("src", "images/cds/verivery.png");
           $("#current-cd img").toggleClass("rotate");
+
+          $("#current-song-verivery").css("display", "block");
+          $("#current-song-enhypen").css("display", "none");
+          $("#current-song-gidle").css("display", "none");
+          $("#current-song-aespa").css("display", "none");
+          $("#current-song-bnd").css("display", "none");
+          $("#current-song-ls").css("display", "none");
         }
       });
 
@@ -318,6 +408,13 @@
           "src",
           "images/svg/buttons/aespa-pause.svg"
         );
+
+        $("#current-song-aespa").css("display", "block");
+        $("#current-song-enhypen").css("display", "none");
+        $("#current-song-gidle").css("display", "none");
+        $("#current-song-verivery").css("display", "none");
+        $("#current-song-bnd").css("display", "none");
+        $("#current-song-ls").css("display", "none");
       });
 
       $("#aespa-play-pause").click(function () {
@@ -336,6 +433,13 @@
           );
           $("#current-cd img").attr("src", "images/cds/aespa.png");
           $("#current-cd img").toggleClass("rotate");
+
+          $("#current-song-aespa").css("display", "block");
+          $("#current-song-enhypen").css("display", "none");
+          $("#current-song-gidle").css("display", "none");
+          $("#current-song-verivery").css("display", "none");
+          $("#current-song-bnd").css("display", "none");
+          $("#current-song-ls").css("display", "none");
         }
       });
 
@@ -350,6 +454,13 @@
           "src",
           "images/svg/buttons/bnd-pause.svg"
         );
+
+        $("#current-song-bnd").css("display", "block");
+        $("#current-song-enhypen").css("display", "none");
+        $("#current-song-gidle").css("display", "none");
+        $("#current-song-verivery").css("display", "none");
+        $("#current-song-aespa").css("display", "none");
+        $("#current-song-ls").css("display", "none");
       });
 
       $("#bnd-play-pause").click(function () {
@@ -368,6 +479,13 @@
           );
           $("#current-cd img").attr("src", "images/cds/bnd.png");
           $("#current-cd img").toggleClass("rotate");
+
+          $("#current-song-bnd").css("display", "block");
+          $("#current-song-enhypen").css("display", "none");
+          $("#current-song-gidle").css("display", "none");
+          $("#current-song-verivery").css("display", "none");
+          $("#current-song-aespa").css("display", "none");
+          $("#current-song-ls").css("display", "none");
         }
       });
 
@@ -379,6 +497,13 @@
         $("#current-cd img").attr("src", "images/cds/ls.png");
         $("#current-cd img").toggleClass("rotate");
         $("#ls-play-pause img").attr("src", "images/svg/buttons/ls-pause.svg");
+
+        $("#current-song-ls").css("display", "block");
+        $("#current-song-enhypen").css("display", "none");
+        $("#current-song-gidle").css("display", "none");
+        $("#current-song-verivery").css("display", "none");
+        $("#current-song-aespa").css("display", "none");
+        $("#current-song-bnd").css("display", "none");
       });
 
       $("#ls-play-pause").click(function () {
@@ -394,6 +519,13 @@
           );
           $("#current-cd img").attr("src", "images/cds/ls.png");
           $("#current-cd img").toggleClass("rotate");
+
+          $("#current-song-ls").css("display", "block");
+          $("#current-song-enhypen").css("display", "none");
+          $("#current-song-gidle").css("display", "none");
+          $("#current-song-verivery").css("display", "none");
+          $("#current-song-aespa").css("display", "none");
+          $("#current-song-bnd").css("display", "none");
         }
       });
     </script>

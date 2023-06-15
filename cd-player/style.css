@@ -99,16 +99,6 @@ body {
   z-index: 0;
 }
 
-#current-cd {
-  position: absolute;
-  top: 50px;
-  left: 130px;
-  z-index: 9;
-}
-#current-cd img {
-  width: 300px;
-  display: inline-block;
-}
 .products-link-hover:hover {
   color: #ff7b9c;
 }
@@ -118,6 +108,7 @@ body {
 }
 
 #current-home-link {
+  font-weight: 600;
   color: #8b8b8b;
 }
 
@@ -218,14 +209,31 @@ body {
   z-index: 1;
 }
 
+#current-cd {
+  position: absolute;
+  top: 45px;
+  left: 118px;
+  z-index: 9;
+}
+#current-cd img {
+  width: 290px;
+  display: inline-block;
+}
+
+.overall-current-song-box {
+  width: 500px;
+  align-self: center;
+  position: relative;
+  top: 170px;
+}
+
 .current-song-container {
   position: relative;
-  right: 50px;
+  left: -60px;
   z-index: 2;
   display: block;
 
   border-bottom: 1px solid black;
-  margin-bottom: 40px;
 }
 
 .current-song-name {
@@ -233,6 +241,15 @@ body {
   font-weight: 700;
   font-style: normal;
   font-size: 34px;
+
+  margin: 0;
+}
+
+.current-song-name-medium {
+  font-family: essonnes-display, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 32px;
 
   margin: 0;
 }
@@ -347,6 +364,10 @@ body {
   text-align: center;
   letter-spacing: 0.04em;
   margin: 0;
+}
+
+.hide {
+  display: none;
 }
 
 /* PRODUCTS PAGE */
