@@ -17,3 +17,51 @@ section div:nth-child(2) {
   flex: 1;
   border: 4px solid palevioletred;
 }
+
+.marquee {
+  --gap: 1rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-evenly;
+  gap: var(--gap);
+  min-width: 100%;
+
+  animation: scroll 10s linear infinite;
+  margin: 0;
+  padding: 0;
+}
+
+.marquee--hover-pause:hover .marquee__content {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+.card {
+  flex: 0 0 auto;
+  list-style: none;
+  width: 280px;
+  height: 280px;
+  background-color: #7d8cc4;
+  border-radius: 2rem;
+  color: white;
+  text-align: center;
+
+  margin: 10px;
+  box-sizing: border-box;
+}
